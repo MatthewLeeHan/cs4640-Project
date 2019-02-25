@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+    background: linear-gradient(180deg, #FFFFFF 17%, #87CEFA 17%);
+}
+
+h1 {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+	font: 50px "Karla";
+	margin-left: 20px;
+}
+
+#logo {
+  text-decoration: none;
+  color: #262626;
+}
+
+.button {
+  background-color: #87CEFA; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 19px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.login {
+	border-radius: 20px;
+    position:absolute;
+    top: 5%;
+    left: 77%;
+	width: 120px;
+	height: 60px;
+}
+
+.signup {
+	border-radius: 20px;
+    position:absolute;
+    top: 5%;
+    left: 88%;
+    width: 120px;
+    height: 60px;
+}
