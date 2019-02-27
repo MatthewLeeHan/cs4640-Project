@@ -20,111 +20,149 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 div {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 h1 {
   font-size: 35px;
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 body {
-  background-color: #87CEFA; }
-  body header {
-    height: 100px; }
-    body header .title_box input {
-      padding: 25px 12px 20px;
-      border-radius: 25px;
-      border: none;
-      margin: 30px;
-      width: 900px;
-      text-align: center;
-      font-size: 30px; }
-  body .container {
-    display: flex;
-    justify-content: space-evenly; }
-    body .container .box {
-      width: 500px;
-      height: 500px;
-      background: #FFFFFF;
-      margin: 30px;
-      border-radius: 2px;
-      text-align: center; }
-      body .container .box #start {
-        padding: 20px; }
-      body .container .box #calendar {
-        border-radius: 15px;
-        background-color: #6495ED;
-        color: #FFFFFF;
-        border: none;
-        width: 300px;
-        height: 40px;
-        font-size: 18px;
-        text-align: center; }
-    body .container .left {
-      order: 1; }
-    body .container .right {
-      order: 2; }
-      body .container .right #description {
-        text-align: center;
-        margin: 10px;
-        padding: 13px; }
-      body .container .right input {
-        display: inline-flex;
-        width: 400px;
-        height: 350px;
-        border-radius: 25px;
-        border: none;
-        text-align: center;
-        font-size: 20px;
-        background-color: #F2F2F2; }
-    body .container .btnHolder {
-      display: flex;
-      order: 3; }
-      body .container .btnHolder #create {
-        border-radius: 15px;
-        background-color: #6495ED;
-        color: #FFFFFF;
-        border: none;
-        width: 150px;
-        height: 40px;
-        font-size: 18px; }
+  background-color: #87CEFA;
+}
+body header {
+  height: 100px;
+}
+body header .title_box {
+  display: flex;
+  justify-content: center;
+}
+body header .title_box input {
+  padding: 25px 12px 20px;
+  border-radius: 25px;
+  border: none;
+  margin: 30px;
+  width: 900px;
+  text-align: center;
+  font-size: 30px;
+}
+body .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body .container .box {
+  width: 500px;
+  height: 500px;
+  background: #FFFFFF;
+  margin: 30px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+body .container .left {
+  order: 1;
+}
+body .container .left #start {
+  margin: 20px;
+}
+body .container .left #calendar {
+  border-radius: 15px;
+  background-color: #6495ED;
+  color: #FFFFFF;
+  border: none;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+body .container .right {
+  order: 2;
+}
+body .container .right #description {
+  text-align: center;
+  margin: 10px;
+  padding: 13px;
+}
+body .container .right input {
+  display: inline-flex;
+  justify-content: center;
+  width: 400px;
+  height: 350px;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  background-color: #F2F2F2;
+}
+body .container .btnHolder {
+  display: flex;
+}
+body .container .btnHolder .create {
+  border-radius: 15px;
+  background-color: #6495ED;
+  color: #FFFFFF;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  align-self: flex-end;
+}
+body .container .btnHolder .create:hover {
+  background-color: #6495ED;
+}
 
 /*# sourceMappingURL=createEvent.css.map */
