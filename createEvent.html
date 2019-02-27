@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScheduleMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- <link rel="stylesheet" href="./css/homePage.css"/> -->
+    <link rel="stylesheet" href="./css/createEvent.css" />
+    <script type="text/javascript" src="./js/createEvent.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="title_box">
+            <input type="text" name="event_title" placeholder="ENTER TITLE OF EVENT HERE">
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="box left">
+            <h1 id="start"> Enter the Start Date and the End Date </h1>
+            <input id="calendar" type="text" name="datetimes" autocomplete="off" />
+        </div>
+
+        <div class="box right">
+            <h1 id="description"> Enter the Details About this Event. </h1>
+            <input type="text" name="event_desc" placeholder="Please Type the Event Details">
+        </div>
+
+        <div class="btnHolder">
+            <button id="create" onclick="index.html">Create Event</button>
+        </div>
+    </div>
+</body>
+
+</html>
