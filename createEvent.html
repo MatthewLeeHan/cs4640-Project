@@ -30,16 +30,20 @@
     <div class="container">
         <div class="box left">
             <h1 id="start"> Enter the Start Date and the End Date </h1>
-            <input id="calendar" type="text" name="datetimes" autocomplete="off" />
+            <div class="caldiv">
+                <input id="calendar" type="text" name="datetimes" autocomplete="off" />
+            </div>
         </div>
 
         <div class="box right">
             <h1 id="description"> Enter the Details About this Event. </h1>
-            <input type="text" name="event_desc" placeholder="Please Type the Event Details">
+            <div class = "textbox">
+                <input type="text" name="event_desc" placeholder="Please Type the Event Details">
+            </div>
         </div>
 
         <div class="btnHolder">
-            <a href="index.html"><button class="create">Create Event</button></a>
+            <a href="index.html"><button class="create" onclick="submit_confirm()">Create Event</button></a>
         </div>
     </div>
 </body>

@@ -8,3 +8,7 @@ $(function() {
       }
     });
   });
+
+  function submit_confirm() {
+    alert("Are you sure you want to create this event?")
+  }
