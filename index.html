@@ -13,15 +13,17 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-	<header>
-		<div class="logo">
-			<h1><a href = "index.html"> ScheduleMe </a></h1>
-		</div> 
-		<div class="btnHolder">
-			<button onclick="logIn.html">Log In</button>
-			<button>Sign Up</button>
-		</div>
-	</header>
+	<div class="containerHeader">
+		<header>
+			<div class="logo">
+				<h1><a href = "index.html"> ScheduleMe </a></h1>
+			</div> 
+			<div class="btnHolder">
+				<button onclick="logIn.html"><a href = "./logIn.html">Log in </a></button>
+				<button>Sign Up</button>
+			</div>
+		</header>
+	</div>
 	<div class="container">
 		<h1 class="heroText">Scheduling meetings has never been easier.</h1>
 		<div class="threeFeaturesContainer">
@@ -49,7 +51,15 @@
 		</div>
 	</div>
 	<footer>
-		<p>Made by Jiwon Cha and Matthew Han</p>
+		<div class="footerContainer">
+			<div class="authors">
+				<p>Made by Jiwon Cha and Matthew Han</p>
+				<p>Web PL Project Spring 2019</p>
+			</div>
+			<div class="footer-links">
+				<a href="">Help</a>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
