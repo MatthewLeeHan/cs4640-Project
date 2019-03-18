@@ -27,23 +27,26 @@
 
     </header>
 
-    <div class="container">
-        <div class="box left">
-            <h1 id="start"> Enter the Start Date and the End Date </h1>
-            <div class="caldiv">
-                <input id="calendar" type="text" name="datetimes" autocomplete="off" />
-            </div>
-        </div>
+    <div class="wrap">
 
-        <div class="box right">
-            <h1 id="description"> Enter the Details About this Event </h1>
-            <div class = "textbox">
-                <textarea rows="30" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
+        <div class="container">
+            <div class="box left">
+                <h1 id="start"> Enter the Start Date and the End Date </h1>
+                <div class="caldiv">
+                    <input id="calendar" type="text" name="datetimes" autocomplete="off" />
+                </div>
             </div>
-        </div>
 
-        <div class="btnHolder">
-            <a href="index.html"><button class="create" onclick="submit_confirm()">Create Event</button></a>
+            <div class="box right">
+                <h1 id="description"> Enter the Details About this Event </h1>
+                <div class = "textbox">
+                    <textarea rows="30" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
+                </div>
+            </div>
+
+            <div class="btnHolder">
+                <a href="index.html"><button class="create" onclick="submit_confirm()">Create Event</button></a>
+            </div>
         </div>
     </div>
 </body>
