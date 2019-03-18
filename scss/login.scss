@@ -86,6 +86,14 @@ body{
         .submitbtn{
             // display: flex;
             // justify-content: center;
+            #submit:hover{
+                opacity: 1;
+                transform: scale(1.1) perspective(1px);
+                cursor: pointer;
+            }
+            #submit:focus{
+                outline: 0;
+            }
             #submit{
                 border-style: solid;
                 border-width: 4px;
