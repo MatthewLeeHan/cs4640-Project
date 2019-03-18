@@ -2,7 +2,6 @@
 @import "fontsColors";
 
 body{
-    background-color:  #87CEFA;
     font-family: 'Ubuntu', sans-serif;
     header{
         background-color: white;
@@ -18,14 +17,37 @@ body{
             }
         }
     }
+    .card-container{
+        border-radius: 20px;
+        background-color:  #87CEFA;
+        height: fit-content;
+        width: fit-content;
+        padding: 50px 100px 50px 100px;
+        margin: 0 auto; 
+        -webkit-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        -moz-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
 
+    }
+    .form-holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 100vw;
+        // height: calc(100vh - 110px);
+    }
     form{
-        position: relative;
-        text-align: center;
+        // position: relative;
+        // text-align: center;
+        // display: flex;
+        // justify-content: center;
+        // align-content: center;
+        flex-direction: column;
         .idinput{
-            padding: 60px 30px 30px 30px;
-            display: flex;
-            justify-content: center;
+            padding: 0px 0 60px 0;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
             #user_id{
                 border: 0;
                 outline: 0;
@@ -36,11 +58,16 @@ body{
                 font-size: 20px;
                 font-family: 'Karla', sans-serif;
             }
+            #user_id_error{
+                // flex-basis: 1;
+                color: red;
+                margin-top: 10px;
+            }
         }
         .pwinput{
-            padding: 20px 30px 30px 30px;
-            display: flex;
-            justify-content: center;
+            padding: 0px 0px 80px 0px;
+            // display: flex;
+            // justify-content: center;
             #password{
                 border: 0;
                 outline: 0;
@@ -51,10 +78,14 @@ body{
                 font-size: 20px;
                 font-family: 'Karla', sans-serif;
             }
+            #pw_id_error{
+                color: red;
+                margin-top: 10px;
+            }
         }
         .submitbtn{
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
             #submit{
                 border-style: solid;
                 border-width: 4px;
@@ -68,6 +99,12 @@ body{
                 font-family: 'Karla', sans-serif;
                 border-radius: 15px;
             }
+        }
+
+        .disabled{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
         }
     }
     footer {

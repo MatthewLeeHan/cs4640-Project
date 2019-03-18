@@ -17,19 +17,26 @@
 			<h1><a href="index.html"> ScheduleMe </a></h1>
 		</div>
 	</header>
+	<div class="card-container">
+		<div class="form-holder">
+			<form>
+				<div class = "idinput">
+					<input type="text" id="user_id" name="user_id" placeholder="User ID"> 
+					<br>
+					<div id="user_id_error"></div>
+				</div>
+				<div class = "pwinput">
+					<input type="password" id="password" name="password" placeholder="Password"> <br>
+					<div id="pw_id_error"></div>
+				</div>
+				<div class = "submitbtn">
+					<input type="button" id="submit" name="submit" value="Log In" onclick="validateForm()">
+				</div>
+			</form>
+		</div>
+	</div>
 
-	<form>
-		<div class = "idinput">
-			<input type="text" id="user_id" name="user_id" placeholder="User ID" required> <br>
-		</div>
-		<div class = "pwinput">
-			<input type="password" id="password" name="password" placeholder="Password" required> <br>
-		</div>
-		<div class = "submitbtn">
-			<input type="submit" id="submit" name="submit" value="Log In">
-		</div>
-	</form>
-
+	<script type="text/javascript" src="./js/login.js"></script>
 </body>
 <footer>
 		<p>Made by Jiwon Cha and Matthew Han</p>

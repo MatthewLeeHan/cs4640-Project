@@ -1,11 +1,12 @@
 // anonymous function requirement
 (function () {
     document.getElementById("pageContent").style.display='none';
-    setTimeout(function(){loaderCease();},2000);
+    // after 1.5 seconds, loader will finish, rest of site will then show up
+    setTimeout(function(){loaderCease();},1500);
 })();
   
+// maybe could add an animation to body coming in
 function loaderCease() {
-    // alert('yee');
     var myloader = document.getElementById("loadingSpinner");
     var myPageContent = document.getElementById("pageContent");
     var mySpinnerHolder = document.getElementById("spinnerHolder");
