@@ -22,7 +22,7 @@
     <header>
 
         <div class="title_box">
-            <input type="text" name="event_title" placeholder="Event Title">
+            <input type="text" id = "event_title" name="event_title" placeholder="Event Title">
         </div>
 
     </header>
@@ -40,12 +40,12 @@
             <div class="box right">
                 <h1 id="description"> Enter the Details About this Event </h1>
                 <div class = "textbox">
-                    <textarea rows="30" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
+                    <textarea rows="30" id="event_desc" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
                 </div>
             </div>
 
             <div class="btnHolder">
-                <a href="index.html"><button class="create" onclick="submit_confirm()">Create Event</button></a>
+                <button class="create" onclick="submit_confirm()">Create Event</button>
             </div>
         </div>
     </div>

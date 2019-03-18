@@ -85,7 +85,7 @@ a {
 }
 
 body {
-  background-color: #87CEFA;
+  background-color: white;
 }
 
 body header {
@@ -114,15 +114,26 @@ body header .title_box input {
   font-size: 30px;
 }
 
-body .container {
+body .wrap {
+  background-color: #87CEFA;
+  border-radius: 10px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+
+body .wrap .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  border-radius: 300px;
 }
 
-body .container .box {
+body .wrap .container .box {
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
   width: 400px;
   height: 400px;
   background: #FFFFFF;
@@ -134,22 +145,22 @@ body .container .box {
           flex: 1 1 auto;
 }
 
-body .container .left {
+body .wrap .container .left {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-body .container .left #start {
+body .wrap .container .left #start {
   margin: 20px;
   font-size: 25px;
 }
 
-body .container .left .caldiv {
+body .wrap .container .left .caldiv {
   margin: 20px;
 }
 
-body .container .left .caldiv #calendar {
+body .wrap .container .left .caldiv #calendar {
   border-radius: 15px;
   background-color: #6495ED;
   color: #FFFFFF;
@@ -160,23 +171,23 @@ body .container .left .caldiv #calendar {
   text-align: center;
 }
 
-body .container .right {
+body .wrap .container .right {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-body .container .right #description {
+body .wrap .container .right #description {
   text-align: center;
   margin: 20px;
   font-size: 25px;
 }
 
-body .container .right .textbox {
+body .wrap .container .right .textbox {
   margin: 20px;
 }
 
-body .container .right .textbox #event_desc {
+body .wrap .container .right .textbox #event_desc {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -192,17 +203,19 @@ body .container .right .textbox #event_desc {
   background-color: #F2F2F2;
 }
 
-body .container .right .textbox #event_desc:focus {
+body .wrap .container .right .textbox #event_desc:focus {
   outline: 0;
 }
 
-body .container .btnHolder {
+body .wrap .container .btnHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .container .btnHolder .create {
+body .wrap .container .btnHolder .create {
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
   border-radius: 15px;
   background-color: #6495ED;
   color: #FFFFFF;
@@ -218,11 +231,15 @@ body .container .btnHolder .create {
   opacity: 0.7;
 }
 
-body .container .btnHolder .create:hover {
+body .wrap .container .btnHolder .create:hover {
   background-color: #6495ED;
   opacity: 1;
   -webkit-transform: scale(1.1) perspective(1px);
           transform: scale(1.1) perspective(1px);
+}
+
+body .wrap .container .btnHolder .create:focus {
+  outline: 0;
 }
 
 @media only screen and (max-width: 950px) {
