@@ -79,9 +79,55 @@ h1 {
   font-weight: bolder;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #87CEFA;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 body {
-  background-color: #87CEFA;
   font-family: 'Ubuntu', sans-serif;
+}
+
+body .containerHeader {
+  width: 90%;
+  margin: 1vh auto;
 }
 
 body header {
@@ -92,7 +138,7 @@ body header {
 
 body header .logo {
   float: left;
-  padding: 40px 0 0 30px;
+  padding: 40px 0 0 0;
 }
 
 body header .logo a {
@@ -101,7 +147,7 @@ body header .logo a {
 }
 
 body header .btnHolder {
-  padding: 30px 30px 0 20px;
+  padding: 30px 0px 0 0px;
   float: right;
 }
 
@@ -113,11 +159,19 @@ body header .btnHolder button {
   background-color: #87CEFA;
   color: white;
   font-size: 15px;
+  margin: 0 0 0 15px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
 }
 
 body .container {
+  border-radius: 20px;
   width: 90%;
-  margin: 5vh auto;
+  margin: 1vh auto;
+  padding: 1px 0 60px 0;
+  background-color: #87CEFA;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
 }
 
 body .container .heroText {
@@ -128,7 +182,7 @@ body .container h1 {
   color: white;
   font-size: 4vw;
   font-weight: 500;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 body .container .threeFeaturesContainer {
@@ -188,8 +242,29 @@ body .container .threeFeaturesContainer .feature .feature-text p {
 }
 
 body footer {
-  width: 100%;
-  height: 110px;
+  border-radius: 20px;
+  width: 90%;
+  margin: 1vh auto;
+  height: 70px;
+  background-color: #87CEFA;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+
+body footer .footerContainer {
+  width: 90%;
+  margin: 5vh auto;
+  color: white;
+}
+
+body footer .footerContainer .authors {
+  padding-top: 20px;
+  float: left;
+}
+
+body footer .footerContainer .footer-links {
+  float: right;
+  padding-top: 25px;
 }
 
 @media only screen and (max-width: 769px) {
@@ -255,6 +330,34 @@ body footer {
   }
   body .container .threeFeaturesContainer .feature-3 {
     margin-top: 5vh;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  body header {
+    height: 70px;
+  }
+  body header .logo {
+    float: left;
+    padding: 10px 0 0 6px;
+  }
+  body header .logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  body header .btnHolder {
+    padding: 15px 0 0 0px;
+    float: right;
+  }
+  body header .btnHolder button {
+    display: inline;
+    padding: 9px 10px 9px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #87CEFA;
+    color: white;
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=homePage.css.map */
