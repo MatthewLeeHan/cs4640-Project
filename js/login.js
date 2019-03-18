@@ -17,5 +17,6 @@ function validateForm(){
     else{
         document.getElementById('user_id_error').innerHTML ="";
         document.getElementById('pw_id_error').innerHTML ="";
+        window.location.href="createEvent.html";
     }
 }
