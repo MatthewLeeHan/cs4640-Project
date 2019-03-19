@@ -179,6 +179,17 @@ body form .pwinput #pw_id_error {
   margin-top: 10px;
 }
 
+body form .submitbtn #submit:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1) perspective(1px);
+          transform: scale(1.1) perspective(1px);
+  cursor: pointer;
+}
+
+body form .submitbtn #submit:focus {
+  outline: 0;
+}
+
 body form .submitbtn #submit {
   border-style: solid;
   border-width: 4px;
@@ -227,6 +238,72 @@ body footer {
     font-size: 25px;
     font-family: 'Karla', sans-serif;
     border-radius: 15px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  body .card-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body form .pwinput {
+    padding: 0px 0px 0px 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body form .pwinput #password {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 3px dotted gray;
+    width: 300px;
+    height: 70px;
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+  }
+  body form .pwinput #pw_id_error {
+    color: red;
+    margin-top: 10px;
+  }
+  body form .idinput {
+    padding: 0px 0 60px 0;
+  }
+  body form .idinput #user_id {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 3px dotted gray;
+    width: 300px;
+    height: 70px;
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+  }
+  body form .idinput #user_id_error {
+    color: red;
+    margin-top: 10px;
+  }
+  body form .submitbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body form .submitbtn #submit {
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+    width: 60vw;
+    height: 40px;
+    font-size: 20px;
+    background-color: #6495ED;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: 'Karla', sans-serif;
+    border-radius: 15px;
+    margin-top: 30px;
   }
 }
 
