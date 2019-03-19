@@ -142,7 +142,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
     body{
         .wrap{
             .container{
@@ -153,6 +153,7 @@ body {
                 .left{
                     .caldiv{
                         #calendar{
+                            word-wrap: break-word;
                             font-size: 15px;
                             width: 230px;
                             height: 50px;
