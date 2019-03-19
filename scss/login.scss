@@ -23,6 +23,7 @@ body{
         height: fit-content;
         width: fit-content;
         padding: 50px 100px 50px 100px;
+        // padding: 100px;
         margin: 0 auto; 
         -webkit-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
         -moz-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
@@ -146,6 +147,76 @@ body{
         }
     }
 }
+@media only screen and (max-width: 769px){
+    body{   
+        .card-container{
+            width: 90%;
+            margin: 0 auto;
+            
+        }
+        form{
+            // width: 90%;
+            .pwinput{
+                padding: 0px 0px 0px 0px;
+                width: fit-content;
+                #password{
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    border-bottom: 3px dotted gray;
+                    width: 300px;
+                    height: 70px;
+                    font-size: 20px;
+                    font-family: 'Karla', sans-serif;
+                }
+                #pw_id_error{
+                    color: red;
+                    margin-top: 10px;
+                }
+            }
+            .idinput{
+                padding: 0px 0 60px 0;
+                // display: flex;
+                // justify-content: center;
+                // flex-direction: column;
+                #user_id{
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    border-bottom: 3px dotted gray;
+                    width: 300px;
+                    height: 70px;
+                    font-size: 20px;
+                    font-family: 'Karla', sans-serif;
+                }
+                #user_id_error{
+                    // flex-basis: 1;
+                    color: red;
+                    margin-top: 10px;
+                }
+            }
+            .submitbtn{
+                display: flex;
+                justify-content: center;
+                #submit{
+                    border-style: solid;
+                    border-width: 4px;
+                    border-color: white;
+                    width: 60vw;
+                    height: 40px;
+                    font-size: 20px;
+                    background-color: #6495ED;
+                    color: #FFFFFF;
+                    font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    border-radius: 15px;
+                    margin-top: 30px;
+                }
+            }
+        } 
+    }
+}
+
 
 @media only screen and (max-width: 400px){
     body{
