@@ -28,26 +28,30 @@
 	</header>
 	<div class="card-container">
 		<div class="form-holder">
-			<form>
+			<form name="signupform" action="./php/signup.php" method="POST">
 				<div class = "idinput">
+					<p> Enter your username:  </p>
 					<input type="text" id="user_id" name="user_id" placeholder="User ID"> 
 					<br>
 					<div id="user_id_error"></div>
 				</div>
 				<div class = "pwinput">
+					<p> Enter your password:  </p>
 					<input type="password" id="password" name="password" placeholder="Password"> <br>
 					<div id="pw_id_error"></div>
                 </div>
                 <div class = "nameinput">
+					<p> Enter your name:  </p>
                     <input type="text" id="name" name="name" placeholder="Name"> <br>
                     <div id="name_error"></div>
                 </div>
                 <div class = "emailinput">
+					<p> Enter your email:  </p>
                     <input type="email" id="email" name="email" placeholder="Email"> <br>
                     <div id="email_error"></div>
 				</div>
 				<div class = "submitbtn">
-					<input type="button" id="submit" name="submit" value="Log In" onclick="validateForm()">
+					<input type="button" id="submit" name="submit" value="Sign Up" onclick="validateForm()">
 				</div>
 			</form>
 		</div>
