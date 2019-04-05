@@ -1,0 +1,285 @@
+@import "cssReset";
+@import "fontsColors";
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px;
+    header{
+        background-color: white;
+        height: 110px;
+        border: none;
+        .logo{
+            position: relative;
+            top: 30%;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .card-container{
+        border-radius: 20px;
+        background-color:  #87CEFA;
+        height: fit-content;
+        width: fit-content;
+        padding: 50px 100px 50px 100px;
+        // padding: 100px;
+        margin: 0 auto; 
+        -webkit-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        -moz-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+
+    }
+    .form-holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 100vw;
+        // height: calc(100vh - 110px);
+    }
+    form{
+        // position: relative;
+        // text-align: center;
+        // display: flex;
+        // justify-content: center;
+        // align-content: center;
+        flex-direction: column;
+        .idinput{
+            padding: 0px 0 60px 0;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+            #user_id{
+                border: 0;
+                outline: 0;
+                background: transparent;
+                border-bottom: 3px dotted gray;
+                width: 500px;
+                height: 70px;
+                font-size: 20px;
+                font-family: 'Karla', sans-serif;
+            }
+            #user_id_error{
+                // flex-basis: 1;
+                color: red;
+                margin-top: 10px;
+            }
+        }
+        .pwinput{
+            padding: 0px 0px 80px 0px;
+            // display: flex;
+            // justify-content: center;
+            #password{
+                border: 0;
+                outline: 0;
+                background: transparent;
+                border-bottom: 3px dotted gray;
+                width: 500px;
+                height: 70px;
+                font-size: 20px;
+                font-family: 'Karla', sans-serif;
+            }
+            #pw_id_error{
+                color: red;
+                margin-top: 10px;
+            }
+        }
+        .nameinput{
+            padding: 0px 0 60px 0;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+            #name{
+                border: 0;
+                outline: 0;
+                background: transparent;
+                border-bottom: 3px dotted gray;
+                width: 500px;
+                height: 70px;
+                font-size: 20px;
+                font-family: 'Karla', sans-serif;
+            }
+            #name_error{
+                color: red;
+                margin-top: 10px;
+            }
+        }
+        .emailinput{
+            padding: 0px 0 60px 0;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+            #email{
+                border: 0;
+                outline: 0;
+                background: transparent;
+                border-bottom: 3px dotted gray;
+                width: 500px;
+                height: 70px;
+                font-size: 20px;
+                font-family: 'Karla', sans-serif;
+            }
+            #email_error{
+                // flex-basis: 1;
+                color: red;
+                margin-top: 10px;
+            }
+        }
+        .submitbtn{
+            // display: flex;
+            // justify-content: center;
+            #submit:hover{
+                opacity: 1;
+                transform: scale(1.1) perspective(1px);
+                cursor: pointer;
+            }
+            #submit:focus{
+                outline: 0;
+            }
+            #submit{
+                border-style: solid;
+                border-width: 4px;
+                border-color: white;
+                width: 500px;
+                height: 70px;
+                font-size: 20px;
+                background-color: #6495ED;
+                color: #FFFFFF;
+                font-size: 25px;
+                font-family: 'Karla', sans-serif;
+                border-radius: 15px;
+            }
+        }
+
+        .disabled{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+    }
+    footer {
+        position: fixed;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        form{
+            .submitbtn{
+                display: flex;
+                justify-content: center;
+                #submit{
+                    border-style: solid;
+                    border-width: 4px;
+                    border-color: white;
+                    width: 400px;
+                    height: 50px;
+                    font-size: 20px;
+                    background-color: #6495ED;
+                    color: #FFFFFF;
+                    font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 769px){
+    body{   
+        .card-container{
+            width: 90%;
+            margin: 0 auto;
+            
+        }
+        form{
+            // width: 90%;
+            .pwinput{
+                padding: 0px 0px 0px 0px;
+                width: fit-content;
+                #password{
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    border-bottom: 3px dotted gray;
+                    width: 300px;
+                    height: 70px;
+                    font-size: 20px;
+                    font-family: 'Karla', sans-serif;
+                }
+                #pw_id_error{
+                    color: red;
+                    margin-top: 10px;
+                }
+            }
+            .idinput{
+                padding: 0px 0 60px 0;
+                // display: flex;
+                // justify-content: center;
+                // flex-direction: column;
+                #user_id{
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    border-bottom: 3px dotted gray;
+                    width: 300px;
+                    height: 70px;
+                    font-size: 20px;
+                    font-family: 'Karla', sans-serif;
+                }
+                #user_id_error{
+                    // flex-basis: 1;
+                    color: red;
+                    margin-top: 10px;
+                }
+            }
+            .submitbtn{
+                display: flex;
+                justify-content: center;
+                #submit{
+                    border-style: solid;
+                    border-width: 4px;
+                    border-color: white;
+                    width: 60vw;
+                    height: 40px;
+                    font-size: 20px;
+                    background-color: #6495ED;
+                    color: #FFFFFF;
+                    font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    border-radius: 15px;
+                    margin-top: 30px;
+                }
+            }
+        } 
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    body{
+        form{
+            .submitbtn{
+                display: flex;
+                justify-content: center;
+                #submit{
+                    border-style: solid;
+                    border-width: 4px;
+                    border-color: white;
+                    width: 300px;
+                    height: 40px;
+                    font-size: 20px;
+                    background-color: #6495ED;
+                    color: #FFFFFF;
+                    font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
