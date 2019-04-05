@@ -9,19 +9,19 @@
 //     });
 //   });
 
-// let validation = (arg1, arg2) => {
-//   if (arg1 == "" || arg2 == ""){
-//     alert("Please enter the event title and description");
-//   }
-//   else{
-//     if (confirm("Do you want to create this event?")){
-//       window.location.href = "index.html";
-//     }
-//     else{
-//       return false;
-//     }
-//   }
-// }
+let validation = (arg1, arg2) => {
+  if (arg1 == "" || arg2 == ""){
+    alert("Please enter the event title and description");
+  }
+  else{
+    if (confirm("Do you want to create this event?")){
+      window.location.href = "index.html";
+    }
+    else{
+      return false;
+    }
+  }
+}
 $(function() {
 
   $('input[name="datefilter"]').daterangepicker({
@@ -45,5 +45,7 @@ $(function() {
 function submit_confirm() {
     var title = document.getElementById("event_title").value;
     var event_desc = document.getElementById("event_desc").value;
+    var date = document.getElementById('calendar').value;
+    // alert(date);
     return validation(title, event_desc);
 }
