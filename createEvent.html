@@ -1,4 +1,6 @@
-<!-- Jiwon Cha (jc4va) -->
+<?php include('php/createEvent-handler.php'); ?>
+
+<!-- Jiwon Cha (jc4va) & Matthew Han (mlh6fc) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,23 +33,25 @@
     <div class="wrap">
 
         <div class="container">
-            <div class="box left">
-                <h1 id="start"> Enter the Start Date and the End Date </h1>
-                <div class="caldiv">
-                    <input id="calendar" type="text" name="datefilter" autocomplete="off" />
+            <form class="createEventForm" method="POST">
+                <div class="box left">
+                    <h1 id="start"> Enter the Start Date and the End Date </h1>
+                    <div class="caldiv">
+                        <input id="calendar" type="text" name="datefilter" autocomplete="off" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="box right">
-                <h1 id="description"> Enter the Details About this Event </h1>
-                <div class = "textbox">
-                    <textarea rows="30" id="event_desc" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
+                <div class="box right">
+                    <h1 id="description"> Enter the Details About this Event </h1>
+                    <div class = "textbox">
+                        <textarea rows="30" id="event_desc" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
+                    </div>
                 </div>
-            </div>
 
-            <div class="btnHolder">
-                <button action="<?php $_SERVER['PHP_SELF'] ?>" class="create" onclick="submit_confirm()">Create Event</button>
-            </div>  
+                <div class="btnHolder">
+                    <button type="submit" class="create">Create Event</button>
+                </div>  
+            </form>
         </div>
     </div>
     

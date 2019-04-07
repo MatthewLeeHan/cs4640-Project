@@ -96,6 +96,8 @@ body {
       display: flex;
       justify-content: space-around;
       border-radius: 300px; }
+      body .wrap .container .createEventForm {
+        display: flex; }
       body .wrap .container .box {
         box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
         width: 400px;
