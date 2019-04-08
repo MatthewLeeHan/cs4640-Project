@@ -1,0 +1,44 @@
+@import "cssReset";
+@import "fontsColors";
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px;
+    header{
+        background-color: white;
+        height: 110px;
+        border: none;
+        .logo{
+            position: relative;
+            top: 30%;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .card-container{
+        border-radius: 20px;
+        background-color:  #87CEFA;
+        height: fit-content;
+        width: fit-content;
+        padding: 50px 100px 50px 100px;
+        // padding: 100px;
+        margin: 0 auto; 
+        -webkit-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        -moz-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+
+    }
+    .form-holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 100vw;
+        // height: calc(100vh - 110px);
+    }
+    table, td {
+        border: 1px solid black;
+      }
+}

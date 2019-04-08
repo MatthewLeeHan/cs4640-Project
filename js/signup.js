@@ -24,9 +24,4 @@ function validateForm(){
     else if(user_id != '' && password != '' && name != '' && email == ''){
         document.getElementById('email_error').innerHTML = "Please enter your email"; 
     }
-    else{
-        document.getElementById('user_id_error').innerHTML ="";
-        document.getElementById('pw_id_error').innerHTML ="";
-        window.location.href="createEvent.html";
-    }
 }

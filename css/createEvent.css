@@ -20,177 +20,220 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 div {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 h1 {
   font-size: 35px;
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 a {
   text-decoration: none;
-  color: white; }
+  color: white;
+}
 
 body {
-  background-color: white; }
-  body header {
-    background-color: white;
-    height: 100px;
-    font-family: 'Ubuntu', sans-serif; }
-    body header .logo {
-      position: relative;
-      top: 30%;
-      text-align: center; }
-      body header .logo a {
-        text-decoration: none;
-        color: black; }
-  body .wrap {
-    border-radius: 20px;
-    background-color: #87CEFA;
-    margin: 0 20px 0 20px;
-    box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58); }
-    body .wrap .container {
-      display: flex;
-      flex-direction: column;
-      border-radius: 20px; }
-      body .wrap .container .title-holder {
-        text-align: center; }
-        body .wrap .container .title-holder .title_box input {
-          border: 0;
-          outline: 0;
-          background: transparent;
-          border-bottom: 3px dotted gray;
-          padding: 10px 12px 10px;
-          margin: 30px;
-          width: 450px;
-          text-align: center;
-          font-size: 30px; }
-      body .wrap .container .details-holder {
-        display: flex;
-        justify-content: center; }
-        body .wrap .container .details-holder .box {
-          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-          width: 450px;
-          height: 450px;
-          background: #FFFFFF;
-          margin: 0 50px 50px 50px;
-          border-radius: 20px;
-          text-align: center; }
-        body .wrap .container .details-holder .left #start {
-          margin: 20px;
-          font-size: 25px; }
-        body .wrap .container .details-holder .left .caldiv {
-          margin: 20px; }
-          body .wrap .container .details-holder .left .caldiv #calendar {
-            border-radius: 20px;
-            background-color: #6495ED;
-            color: #FFFFFF;
-            border: none;
-            width: 350px;
-            height: 50px;
-            font-size: 20px;
-            text-align: center; }
-        body .wrap .container .details-holder .right #description {
-          text-align: center;
-          margin: 20px;
-          font-size: 25px; }
-        body .wrap .container .details-holder .right .textbox {
-          margin: 20px; }
-          body .wrap .container .details-holder .right .textbox #event_desc {
-            display: inline-flex;
-            justify-content: center;
-            width: 380px;
-            height: 300px;
-            border-radius: 20px;
-            border: none;
-            text-align: center;
-            font-size: 20px;
-            background-color: #F2F2F2; }
-          body .wrap .container .details-holder .right .textbox #event_desc:focus {
-            outline: 0; }
-      body .wrap .container .btnHolder {
-        display: flex; }
-        body .wrap .container .btnHolder .create {
-          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-          border-radius: 15px;
-          background-color: #6495ED;
-          color: #FFFFFF;
-          border: none;
-          width: 150px;
-          height: 40px;
-          font-size: 18px;
-          position: fixed;
-          bottom: 10px;
-          right: 10px;
-          align-self: flex-end;
-          opacity: 0.7; }
-        body .wrap .container .btnHolder .create:hover {
-          background-color: #6495ED;
-          opacity: 1;
-          transform: scale(1.1) perspective(1px);
-          cursor: pointer; }
-        body .wrap .container .btnHolder .create:focus {
-          outline: 0; }
+  background-color: white;
+}
+body header {
+  background-color: white;
+  height: 100px;
+  font-family: "Ubuntu", sans-serif;
+}
+body header .logo {
+  position: relative;
+  top: 30%;
+  text-align: center;
+}
+body header .logo a {
+  text-decoration: none;
+  color: black;
+}
+body .wrap {
+  border-radius: 20px;
+  background-color: #87CEFA;
+  margin: 0 20px 0 20px;
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+body .wrap .container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+body .wrap .container .title-holder {
+  text-align: center;
+}
+body .wrap .container .title-holder .title_box input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px dotted gray;
+  padding: 10px 12px 10px;
+  margin: 30px;
+  width: 450px;
+  text-align: center;
+  font-size: 30px;
+}
+body .wrap .container .details-holder {
+  display: flex;
+  justify-content: center;
+}
+body .wrap .container .details-holder .box {
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  width: 450px;
+  height: 450px;
+  background: #FFFFFF;
+  margin: 0 50px 50px 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+body .wrap .container .details-holder .left #start {
+  margin: 20px;
+  font-size: 25px;
+}
+body .wrap .container .details-holder .left .caldiv {
+  margin: 20px;
+}
+body .wrap .container .details-holder .left .caldiv #calendar {
+  border-radius: 20px;
+  background-color: #6495ED;
+  color: #FFFFFF;
+  border: none;
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+body .wrap .container .details-holder .right #description {
+  text-align: center;
+  margin: 20px;
+  font-size: 25px;
+}
+body .wrap .container .details-holder .right .textbox {
+  margin: 20px;
+}
+body .wrap .container .details-holder .right .textbox #event_desc {
+  display: inline-flex;
+  justify-content: center;
+  width: 380px;
+  height: 300px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  background-color: #F2F2F2;
+}
+body .wrap .container .details-holder .right .textbox #event_desc:focus {
+  outline: 0;
+}
+body .wrap .container .btnHolder {
+  display: flex;
+}
+body .wrap .container .btnHolder .create {
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  border-radius: 15px;
+  background-color: #6495ED;
+  color: #FFFFFF;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  align-self: flex-end;
+  opacity: 0.7;
+}
+body .wrap .container .btnHolder .create:hover {
+  background-color: #6495ED;
+  opacity: 1;
+  transform: scale(1.1) perspective(1px);
+  cursor: pointer;
+}
+body .wrap .container .btnHolder .create:focus {
+  outline: 0;
+}
 
 @media only screen and (max-width: 950px) {
   body .wrap .container {
-    flex-wrap: wrap; }
-    body .wrap .container .right .textbox #event_desc {
-      position: relative;
-      width: 85%; } }
+    flex-wrap: wrap;
+  }
+  body .wrap .container .right .textbox #event_desc {
+    position: relative;
+    width: 85%;
+  }
+}
 @media only screen and (max-width: 700px) {
   body .wrap .container .box {
     width: 230px;
-    height: 300px; }
+    height: 300px;
+  }
   body .wrap .container .left .caldiv #calendar {
     word-wrap: break-word;
     font-size: 15px;
     width: 230px;
-    height: 50px; }
+    height: 50px;
+  }
   body .wrap .container .right .textbox #event_desc {
     width: 300px;
-    height: 150px; } }
+    height: 150px;
+  }
+}
 @media only screen and (max-width: 480px) {
   body .wrap .container .right .textbox #event_desc {
     width: 200px;
-    height: 150px; } }
+    height: 150px;
+  }
+}
 
 /*# sourceMappingURL=createEvent.css.map */
