@@ -73,49 +73,54 @@ body {
   background-color: white; }
   body header {
     background-color: white;
-    height: 100px; }
-    body header .title_box {
-      display: flex;
-      justify-content: center; }
-      body header .title_box input {
-        border: 0;
-        outline: 0;
-        background: transparent;
-        border-bottom: 3px dotted gray;
-        padding: 10px 12px 10px;
-        margin: 30px;
-        width: 450px;
-        text-align: center;
-        font-size: 30px; }
+    height: 100px;
+    font-family: 'Ubuntu', sans-serif; }
+    body header .logo {
+      position: relative;
+      top: 30%;
+      text-align: center; }
+      body header .logo a {
+        text-decoration: none;
+        color: black; }
   body .wrap {
+    border-radius: 20px;
     background-color: #87CEFA;
-    border-radius: 10px;
-    margin: 20px;
+    margin: 0 20px 0 20px;
     box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58); }
     body .wrap .container {
       display: flex;
-      justify-content: space-around;
-      border-radius: 300px; }
-      body .wrap .container .createEventForm {
-        display: flex; }
-      body .wrap .container .box {
-        box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-        width: 400px;
-        height: 400px;
-        background: #FFFFFF;
-        margin: 50px;
-        border-radius: 5px;
-        text-align: center;
-        flex: 1 1 auto; }
-      body .wrap .container .left {
-        order: 1; }
-        body .wrap .container .left #start {
+      flex-direction: column;
+      border-radius: 20px; }
+      body .wrap .container .title-holder {
+        text-align: center; }
+        body .wrap .container .title-holder .title_box input {
+          border: 0;
+          outline: 0;
+          background: transparent;
+          border-bottom: 3px dotted gray;
+          padding: 10px 12px 10px;
+          margin: 30px;
+          width: 450px;
+          text-align: center;
+          font-size: 30px; }
+      body .wrap .container .details-holder {
+        display: flex;
+        justify-content: center; }
+        body .wrap .container .details-holder .box {
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          width: 450px;
+          height: 450px;
+          background: #FFFFFF;
+          margin: 0 50px 50px 50px;
+          border-radius: 20px;
+          text-align: center; }
+        body .wrap .container .details-holder .left #start {
           margin: 20px;
           font-size: 25px; }
-        body .wrap .container .left .caldiv {
+        body .wrap .container .details-holder .left .caldiv {
           margin: 20px; }
-          body .wrap .container .left .caldiv #calendar {
-            border-radius: 15px;
+          body .wrap .container .details-holder .left .caldiv #calendar {
+            border-radius: 20px;
             background-color: #6495ED;
             color: #FFFFFF;
             border: none;
@@ -123,25 +128,23 @@ body {
             height: 50px;
             font-size: 20px;
             text-align: center; }
-      body .wrap .container .right {
-        order: 2; }
-        body .wrap .container .right #description {
+        body .wrap .container .details-holder .right #description {
           text-align: center;
           margin: 20px;
           font-size: 25px; }
-        body .wrap .container .right .textbox {
+        body .wrap .container .details-holder .right .textbox {
           margin: 20px; }
-          body .wrap .container .right .textbox #event_desc {
+          body .wrap .container .details-holder .right .textbox #event_desc {
             display: inline-flex;
             justify-content: center;
             width: 380px;
             height: 300px;
-            border-radius: 5px;
+            border-radius: 20px;
             border: none;
             text-align: center;
             font-size: 20px;
             background-color: #F2F2F2; }
-          body .wrap .container .right .textbox #event_desc:focus {
+          body .wrap .container .details-holder .right .textbox #event_desc:focus {
             outline: 0; }
       body .wrap .container .btnHolder {
         display: flex; }
