@@ -1,5 +1,5 @@
 <?php
-$avg = NULL;
+session_start();
 ?>
 
 <!-- Jiwon Cha (jc4va) & Matthew Han (mlh6fc) -->
@@ -37,7 +37,7 @@ $avg = NULL;
             <form action="createEvent.php" class="createEventForm" method="POST">
                 <div class="title-holder">
                     <div class="title_box">
-                        <input type="text" id = "event_title" name="event_title" placeholder="Event Title">
+                        <input type="text" id = "event_title" name="event_title" placeholder="Type your event title here...">
                     </div>
                 </div>
                 <div class='details-holder'>
@@ -73,16 +73,22 @@ $avg = NULL;
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     foreach ($_POST as $key => $val){
         $data[$key] = $val;
+        $_SESSION[$key] = $val;
     }
     print_array($data);
 }
 
+// print out values from session storage
 function print_array($arr){
-    while($curr = each($arr)):
-        $k = $curr["key"];
-        $v = $curr['value'];
-        echo "[$k => $v ] <br/>";
-    endwhile;
+    // while($curr = each($arr)):
+    //     $k = $curr["key"];
+    //     $v = $curr['value'];
+    //     echo "[$k => $v ] <br/>";
+    // endwhile;
+    echo $_SESSION['event_title'];
+    echo $_SESSION['datefilter'];
+    echo $_SESSION['event_desc'];
+
 }
 ?>
 
