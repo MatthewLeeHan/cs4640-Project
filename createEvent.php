@@ -42,7 +42,7 @@ session_start();
                     <div class="box left">
                         <h1 id="start"> Enter the Start Date and the End Date </h1>
                         <div class="caldiv">
-                            <input id="calendar" type="text" name="datefilter" autocomplete="off" />
+                            <input id="calendar" type="text" name="datefilter" autocomplete="off" value="Click to select dates"/>
                         </div>
                     </div>
 
