@@ -18,8 +18,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="./css/createEvent.css" />
     <script type="text/javascript" src="./js/createEvent.js"></script>
-
-
 </head>
 
 <body>
@@ -69,6 +67,8 @@ session_start();
 </html>
 
 <?php
+$date = NULL;
+
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     foreach ($_POST as $key => $val){
@@ -85,9 +85,11 @@ function print_array($arr){
     //     $v = $curr['value'];
     //     echo "[$k => $v ] <br/>";
     // endwhile;
-    echo $_SESSION['event_title'];
-    echo $_SESSION['datefilter'];
-    echo $_SESSION['event_desc'];
+    echo $_SESSION['event_title'] . '</br>';
+    echo $_SESSION['datefilter'] . '</br>';
+    echo $_SESSION['event_desc'] . '</br>';
+    list($date1, $date2) = explode('-', $_SESSION['datefilter']);
+    echo $date1 . ' ' . $date2 . '</br>';
 
 }
 ?>
