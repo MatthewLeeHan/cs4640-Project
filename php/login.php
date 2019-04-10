@@ -32,22 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header('Location: ../login.html');
         }
     }
-
-    /*
-    $db_hash = $results['password'];
-    if (count($results) == 1) {
-        if ($pwd == $db_hash){
-            $_SESSION['username'] = $username;
-
-            header('Location: ../createEvent.php');
-
-        }
-    }
-
-    else{
-        header('Location: ../login.html');
-    }
-    */
 }
 
 ?>
