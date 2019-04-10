@@ -15,7 +15,7 @@ let validation = (arg1, arg2) => {
   }
   else{
     if (confirm("Do you want to create this event?")){
-      window.location.href = "index.html";
+      window.location.href = "meeting.html";
     }
     else{
       return false;

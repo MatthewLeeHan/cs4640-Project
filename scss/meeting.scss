@@ -4,6 +4,13 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     margin: 20px;
+    color: black;
+    #row{
+        display: none;
+    }
+    #col{
+        display: none;
+    }
     header{
         background-color: white;
         height: 110px;
@@ -18,31 +25,50 @@ body{
             }
         }
     }
-    .card-container{
-        border-radius: 20px;
-        background-color:  #87CEFA;
-        height: fit-content;
-        width: fit-content;
-        padding: 50px 100px 50px 100px;
-        // padding: 100px;
-        margin: 0 auto; 
-        -webkit-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
-        -moz-box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
-        box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
-
-    }
-    .form-holder{
+    .container{
         display: flex;
-        align-items: center;
         justify-content: center;
-        // width: 100vw;
-        // height: calc(100vh - 110px);
+        // border: 1px solid black;
+        height: auto;
+        min-height: 70vh;
+        .left-side{
+            width: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-side{
+
+        }
+        .card{
+            border-radius: 20px;
+            background-color: #87CEFA;
+            margin: 0 20px 0 20px;
+            box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+            flex: 1 1 auto;
+        }
     }
+
     table, td {
+        // border: 1px solid black;
+        padding: 5px;
+    }
+    td{
+        height: 15px;
+        width: 30px;
         border: 1px solid black;
-      }
+        border-radius: 20px;
+    }
+    #myTable{
+        // border: 2px solid purple;
+        margin: none;
+        padding: none;
+        background-color: white;
+        box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+        // border-radius: 20px;
+    }
 
     td:hover{
-        background: blue;
+        background: rgba($color: #2caca5, $alpha: 0.5);
     }
 }
