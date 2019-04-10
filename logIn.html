@@ -20,7 +20,7 @@
 	</header>
 	<div class="card-container">
 		<div class="form-holder">
-			<form>
+			<form name="loginform" action="./php/login.php" method="POST">
 				<div class = "idinput">
 					<input type="text" id="user_id" name="user_id" placeholder="User ID"> 
 					<br>
@@ -31,11 +31,13 @@
 					<div id="pw_id_error"></div>
 				</div>
 				<div class = "submitbtn">
-					<input type="button" id="submit" name="submit" value="Log In" onclick="validateForm()">
+					<input type="submit" id="submit" name="submit" value="Log In">
 				</div>
 			</form>
 		</div>
 	</div>
+
+	<div id="login_error"></div>
 
 	<script type="text/javascript" src="./js/login.js"></script>
 </body>

@@ -119,5 +119,8 @@ body .form-holder {
 body table, body td {
   border: 1px solid black;
 }
+body td:hover {
+  background: blue;
+}
 
 /*# sourceMappingURL=meeting.css.map */
