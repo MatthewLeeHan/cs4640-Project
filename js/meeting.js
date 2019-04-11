@@ -35,6 +35,7 @@ function showInput() {
             z.setAttribute("style", "background-color:red; border-radius: 0px; border: none;");
             z.appendChild(d);
             document.getElementById("myTable").appendChild(z);
+
         }
         for (i = 1; i <= day2; i++){
             var d = document.createTextNode(i);
@@ -47,7 +48,48 @@ function showInput() {
     }
     else{
         for (i = day1; i <= day2; i++){
-            var d = document.createTextNode(i);
+            // longgggg dumb if cases to put in month name in column header... probably a better way to do this but i was in a hurry LOL
+            if(month1 == '4'){
+                var x = 'April ' + i;
+            }
+            else if(month1 == '1'){
+                var x = 'Jan ' + i;
+            }
+            else if(month1 == '2'){
+                var x = 'Feb ' + i;
+            }
+            else if(month1 == '3'){
+                var x = 'March ' + i;
+            }
+            else if(month1 == '5'){
+                var x = 'May ' + i;
+            }
+            else if(month1 == '6'){
+                var x = 'June ' + i;
+            }
+            else if(month1 == '7'){
+                var x = 'July ' + i;
+            }
+            else if(month1 == '8'){
+                var x = 'August ' + i;
+            }
+            else if(month1 == '9'){
+                var x = 'Sept ' + i;
+            }
+            else if(month1 == '10'){
+                var x = 'Oct ' + i;
+            }
+            else if(month1 == '11'){
+                var x = 'Nov ' + i;
+            }
+            else if(month1 == '12'){
+                var x = 'Dec ' + i;
+            }
+            // shouldn't hit this else statement... but just in case...
+            else{
+                var x = i;
+            }
+            var d = document.createTextNode(x);
             var z = document.createElement("TD");
             z.setAttribute("id", "header");
             z.setAttribute("style", "background-color:red; border-radius: 0px; border: none;");
