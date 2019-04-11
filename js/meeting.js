@@ -10,13 +10,13 @@ function showInput() {
 
 
     // var cols = hidden value input from php (difference between dates)
-    if (month1 > month2){
+    if (month1 => month2){
         var cols = document.getElementById("diff").value;
     }
     else{
         var cols = (dates_in_month[month1] - day1) + day2 + 1;
     }
-    
+
     var rows = '16';
     console.log(rows, cols);
 
