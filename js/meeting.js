@@ -10,7 +10,7 @@ function showInput() {
 
 
     // var cols = hidden value input from php (difference between dates)
-    if (month1 => month2){
+    if (month1 == month2){
         var cols = document.getElementById("diff").value;
     }
     else{
