@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 20px;
+  color: black;
+}
+
+body #row {
+  display: none;
+}
+
+body #col {
+  display: none;
+}
+
+body header {
+  background-color: white;
+  height: 110px;
+  border: none;
+}
+
+body header .logo {
+  position: relative;
+  top: 30%;
+  text-align: center;
+}
+
+body header .logo a {
+  text-decoration: none;
+  color: black;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  min-height: 70vh;
+}
+
+body .container .left-side {
+  width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .card {
+  border-radius: 20px;
+  background-color: #87CEFA;
+  margin: 0 20px 0 20px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body table, body td {
+  padding: 5px;
+}
+
+body td {
+  height: 15px;
+  width: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+body #myTable {
+  margin: none;
+  padding: none;
+  background-color: white;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+
+body td:hover {
+  background: rgba(44, 172, 165, 0.5);
+}
+/*# sourceMappingURL=meeting.css.map */

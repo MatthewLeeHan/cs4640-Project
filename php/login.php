@@ -5,8 +5,8 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $username = $_POST["user_id"];
-    $pwd = md5($_POST["password"]);
+    $username = trim($_POST["user_id"]);
+    $pwd = md5(trim($_POST["password"]));
 
     $query = "SELECT * FROM user WHERE username = :username";
     $statement = $db->prepare($query);
@@ -19,8 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $db_hash = $result['password'];
         if (count($results) == 1) {
             if ($pwd == $db_hash){
-                $_SESSION['username'] = $username;
 
+                setcookie('username', $user, time()+3600);
+                setcookie('password', md5($pwd), time()+3600);
+                
                 header('Location: ../createEvent.php');
 
             }

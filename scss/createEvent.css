@@ -91,18 +91,44 @@ body {
 body header {
   background-color: white;
   height: 100px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-body header .title_box {
+body header .logo {
+  position: relative;
+  top: 30%;
+  text-align: center;
+}
+
+body header .logo a {
+  text-decoration: none;
+  color: black;
+}
+
+body .wrap {
+  border-radius: 20px;
+  background-color: #87CEFA;
+  margin: 0 20px 0 20px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+
+body .wrap .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
 }
 
-body header .title_box input {
+body .wrap .container .title-holder {
+  text-align: center;
+}
+
+body .wrap .container .title-holder .title_box input {
   border: 0;
   outline: 0;
   background: transparent;
@@ -114,54 +140,37 @@ body header .title_box input {
   font-size: 30px;
 }
 
-body .wrap {
-  background-color: #87CEFA;
-  border-radius: 10px;
-  margin: 20px;
-  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-}
-
-body .wrap .container {
+body .wrap .container .details-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  border-radius: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .wrap .container .box {
+body .wrap .container .details-holder .box {
   -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
           box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: #FFFFFF;
-  margin: 50px;
-  border-radius: 5px;
+  margin: 0 50px 50px 50px;
+  border-radius: 20px;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
-body .wrap .container .left {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-body .wrap .container .left #start {
+body .wrap .container .details-holder .left #start {
   margin: 20px;
   font-size: 25px;
 }
 
-body .wrap .container .left .caldiv {
+body .wrap .container .details-holder .left .caldiv {
   margin: 20px;
 }
 
-body .wrap .container .left .caldiv #calendar {
-  border-radius: 15px;
+body .wrap .container .details-holder .left .caldiv #calendar {
+  border-radius: 20px;
   background-color: #6495ED;
   color: #FFFFFF;
   border: none;
@@ -171,23 +180,17 @@ body .wrap .container .left .caldiv #calendar {
   text-align: center;
 }
 
-body .wrap .container .right {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-body .wrap .container .right #description {
+body .wrap .container .details-holder .right #description {
   text-align: center;
   margin: 20px;
   font-size: 25px;
 }
 
-body .wrap .container .right .textbox {
+body .wrap .container .details-holder .right .textbox {
   margin: 20px;
 }
 
-body .wrap .container .right .textbox #event_desc {
+body .wrap .container .details-holder .right .textbox #event_desc {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -196,14 +199,14 @@ body .wrap .container .right .textbox #event_desc {
           justify-content: center;
   width: 380px;
   height: 300px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
   text-align: center;
   font-size: 20px;
   background-color: #F2F2F2;
 }
 
-body .wrap .container .right .textbox #event_desc:focus {
+body .wrap .container .details-holder .right .textbox #event_desc:focus {
   outline: 0;
 }
 

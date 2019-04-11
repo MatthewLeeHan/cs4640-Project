@@ -1,11 +1,11 @@
 <?php
 
-session_start();
-
-if (count($_SESSION) > 0) {
-    unset($_SESSION['username']);
-    session_destroy();
-    header("../index.html");
+if (count($_COOKIE) > 0)
+{
+   foreach ($_COOKIE as $key => $value)
+   {
+      setcookie($key, '', time() - 3600);  
+   }
 }
 
 else{
