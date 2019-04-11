@@ -1,7 +1,6 @@
 <?php
 
 require('connect-db.php');
-session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -15,23 +14,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $results = $statement->fetchAll();
 
+    if (empty($results)){
+        header('Location: ../logIn.html');
+    }
+
     foreach ($results as $result){
         $db_hash = $result['password'];
         if (count($results) == 1) {
             if ($pwd == $db_hash){
 
-                setcookie('username', $user, time()+3600);
-                setcookie('password', md5($pwd), time()+3600);
+                setcookie('username', $username, time()+3600);
+                setcookie('password', $pwd, time()+3600);
                 
                 header('Location: ../createEvent.php');
 
             }
             else{
-                header('Location: ../login.html');
+                header('Location: ../logIn.html');
             }
-        }
-        else{
-            header('Location: ../login.html');
         }
     }
 }
