@@ -1,13 +1,22 @@
 function showInput() {
 
-    // var cols = hidden value input from php (difference between dates)
-    var cols = document.getElementById("diff").value;
-
     // document.getElementById('display').innerHTML = document.getElementById("user_input").value;
 
-    var day1 = document.getElementById("row").value;
-    var day2 = document.getElementById("col").value;
+    var day1 = Number(document.getElementById("row").value);
+    var day2 = Number(document.getElementById("col").value);
+    var month1 = Number(document.getElementById("month1").value);
+    var month2 = Number(document.getElementById("month2").value);
+    var dates_in_month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+
+    // var cols = hidden value input from php (difference between dates)
+    if (month1 > month2){
+        var cols = document.getElementById("diff").value;
+    }
+    else{
+        var cols = (dates_in_month[month1] - day1) + day2 + 1;
+    }
+    
     var rows = '16';
     console.log(rows, cols);
 
@@ -16,12 +25,34 @@ function showInput() {
     var x = document.getElementById('myTable');
     
     // Create table header
-    for (i = day1; i <= day2; i++){
-        var d = document.createTextNode(i);
-        var z = document.createElement("TD");
-        z.setAttribute("id", "header");
-        z.appendChild(d);
-        document.getElementById("myTable").appendChild(z);
+    
+    if (month1 < month2) {
+        for (i = day1; i <= dates_in_month[month1]; i++){
+            var d = document.createTextNode(i);
+            var z = document.createElement("TD");
+            z.setAttribute("id", "header1");
+            z.setAttribute("style", "background-color:red; border-radius: 0px;");
+            z.appendChild(d);
+            document.getElementById("myTable").appendChild(z);
+        }
+        for (i = 1; i <= day2; i++){
+            var d = document.createTextNode(i);
+            var z = document.createElement("TD");
+            z.setAttribute("id", "header2");
+            z.setAttribute("style", "background-color:red; border-radius: 0px;");
+            z.appendChild(d);
+            document.getElementById("myTable").appendChild(z);
+        }
+    }
+    else{
+        for (i = day1; i <= day2; i++){
+            var d = document.createTextNode(i);
+            var z = document.createElement("TD");
+            z.setAttribute("id", "header");
+            z.setAttribute("style", "background-color:red; border-radius: 0px;");
+            z.appendChild(d);
+            document.getElementById("myTable").appendChild(z);
+        }
     }
 
     // Populate the table with 

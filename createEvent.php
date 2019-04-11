@@ -97,6 +97,8 @@ function print_array($arr){
     list($date1_month, $date1_day, $date1_year) = explode('/', $date1_full);
     list($date2_month, $date2_day, $date2_year) = explode('/', $date2_full);
     echo $date1_month . ' ' . $date2_month . '</br>';
+    $_SESSION['$date1_full'] = $date1_full;
+    $_SESSION['$date2_full'] = $date2_full;
     $_SESSION['$date1_month'] = $date1_month;
     $_SESSION['$date1_day'] = $date1_day;
     $_SESSION['$date1_year'] = $date1_year;
