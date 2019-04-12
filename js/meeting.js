@@ -107,10 +107,11 @@ function showInput() {
         for (j = 0; j < cols; j++) {
             var z = document.createElement("TD");
             var t = document.createTextNode(timeArray[i]);
-            z.setAttribute("id", "myTD" + String(j));
+            z.setAttribute("id", "myTD" + String(j) + String(i));
             z.setAttribute("style", "border: none;");
             z.appendChild(t);
             document.getElementById("myTr"+ String(i)).appendChild(z);
         }
     }
+    console.log(document.getElementById("myTD11"));
 }
