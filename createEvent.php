@@ -54,7 +54,6 @@ session_start();
                     </div>
                 </div>
 
-
                 <div class="btnHolder">
                     <button type="submit" class="create">Create Event</button>
                 </div>  
@@ -71,32 +70,26 @@ $date = NULL;
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
+    // Input-validation on server side
     if($_POST['event_title'] == '' || $_POST['datefilter'] == '' || $_POST['event_desc'] == ''){
         echo 'please enter all fields';
     }
     foreach ($_POST as $key => $val){
+        // data is an array... i think
         $data[$key] = $val;
         $_SESSION[$key] = $val;
     }
-    print_array($data);
+    date_split_formatter($data);
     header('Location: meeting.php');
 }
 
-// print out values from session storage
-function print_array($arr){
-    // while($curr = each($arr)):
-    //     $k = $curr["key"];
-    //     $v = $curr['value'];
-    //     echo "[$k => $v ] <br/>";
-    // endwhile;
-    echo $_SESSION['event_title'] . '</br>';
-    echo $_SESSION['datefilter'] . '</br>';
-    echo $_SESSION['event_desc'] . '</br>';
+// splits dates into various SESSION variables to use on other pages
+function date_split_formatter($arr){
+    // using php explode to split data
     list($date1_full, $date2_full) = explode('-', $_SESSION['datefilter']);
-    echo $date1_full . ' ' . $date2_full . '</br>';
     list($date1_month, $date1_day, $date1_year) = explode('/', $date1_full);
     list($date2_month, $date2_day, $date2_year) = explode('/', $date2_full);
-    echo $date1_month . ' ' . $date2_month . '</br>';
+    // setting various session variables
     $_SESSION['$date1_full'] = $date1_full;
     $_SESSION['$date2_full'] = $date2_full;
     $_SESSION['$date1_month'] = $date1_month;
@@ -105,8 +98,6 @@ function print_array($arr){
     $_SESSION['$date2_month'] = $date2_month;
     $_SESSION['$date2_day'] = $date2_day;
     $_SESSION['$date2_year'] = $date2_year;
-
-
 }
 ?>
 

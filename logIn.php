@@ -1,4 +1,6 @@
 <!-- Jiwon Cha (jc4va) -->
+<?php include('./php/login.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +21,17 @@
 		</div>
 	</header>
 	<div class="card-container">
+
 		<div class="form-holder">
-			<form name="loginform" action="./php/login.php" method="POST">
+			<form name="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 				<div class = "idinput">
-					<input type="text" id="user_id" name="user_id" placeholder="User ID"> 
+					<input type="text" id="user_id" name="user_id" placeholder="User ID" value="<?php echo $inputted_username ?>"> 
 					<br>
-					<div id="user_id_error"></div>
+					<div id="user_id_error"><?php echo $user_id_error_msg ?></div>
 				</div>
 				<div class = "pwinput">
 					<input type="password" id="password" name="password" placeholder="Password"> <br>
-					<div id="pw_id_error"></div>
+					<div id="pw_id_error"><?php echo $pw_id_error_msg ?></div>
 				</div>
 				<div class = "submitbtn">
 					<input type="submit" id="submit" name="submit" value="Log In">
@@ -39,6 +42,6 @@
 
 	<div id="login_error"></div>
 
-	<script type="text/javascript" src="./js/login.js"></script>
+	<!-- <script type="text/javascript" src="./js/login.js"></script> -->
 </body>
 </html>
