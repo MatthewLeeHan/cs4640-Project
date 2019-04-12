@@ -17,20 +17,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($results)){
         header('Location: ../logIn.html');
     }
+    else{
+        foreach ($results as $result){
+            $db_hash = $result['password'];
+            if (count($results) == 1) {
+                if ($pwd == $db_hash){
 
-    foreach ($results as $result){
-        $db_hash = $result['password'];
-        if (count($results) == 1) {
-            if ($pwd == $db_hash){
+                    setcookie('username', $username, time()+3600);
+                    setcookie('password', $pwd, time()+3600);
+                    
+                    header('Location: ../createEvent.php');
 
-                setcookie('username', $username, time()+3600);
-                setcookie('password', $pwd, time()+3600);
-                
-                header('Location: ../createEvent.php');
-
-            }
-            else{
-                header('Location: ../logIn.html');
+                }
+                else{
+                    header('Location: ../logIn.html');
+                }
             }
         }
     }

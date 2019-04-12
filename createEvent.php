@@ -67,6 +67,7 @@ session_start();
 </html>
 
 <?php
+
 $date = NULL;
 
 
