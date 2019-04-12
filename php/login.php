@@ -23,8 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (count($results) == 1) {
                 if ($pwd == $db_hash){
 
-                    setcookie('username', $username, time()+3600);
-                    setcookie('password', $pwd, time()+3600);
+                    $user = array(
+                        'username' => $username,
+                        'pwd' => $pwd,
+                    );
+
+                    setcookie('user', $user, time() * 3600);
                     
                     header('Location: ../createEvent.php');
 
