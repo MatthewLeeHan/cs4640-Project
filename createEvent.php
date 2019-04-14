@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('./php/createEventLogic.php');
 ?>
 
 <!-- Jiwon Cha (jc4va) & Matthew Han (mlh6fc) -->
@@ -31,11 +32,13 @@ session_start();
     <div class="wrap">
 
         <div class="container">
+
             <!-- <form action="./php/createEvent-handler.php" class="createEventForm" method="POST"> -->
-            <form action="createEvent.php" class="createEventForm" method="POST">
+            <form name="createEvent-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="createEventForm" method="POST">
                 <div class="title-holder">
                     <div class="title_box">
                         <input type="text" id = "event_title" name="event_title" placeholder="Type your event title here...">
+                        <div class='error'><p><?php echo $title_error_msg ?></p></div>
                     </div>
                 </div>
                 <div class='details-holder'>
@@ -43,11 +46,13 @@ session_start();
                         <h1 id="start"> Enter the Start Date and the End Date </h1>
                         <div class="caldiv">
                             <input id="calendar" type="text" name="datefilter" autocomplete="off" value="Click to select dates"/>
+                            <div class='error'><p><?php echo $date_error_msg ?></p></div>
                         </div>
                     </div>
 
                     <div class="box right">
                         <h1 id="description"> Enter the Details About this Event </h1>
+                        <div class='error'><p><?php echo $details_error_msg ?></p></div>
                         <div class = "textbox">
                             <textarea rows="30" id="event_desc" cols="60" id="event_desc" name="event_desc" placeholder="Please Type the Event Details"></textarea>
                         </div>
@@ -65,40 +70,6 @@ session_start();
 
 </html>
 
-<?php
-$date = NULL;
 
-
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    // Input-validation on server side
-    if($_POST['event_title'] == '' || $_POST['datefilter'] == '' || $_POST['event_desc'] == ''){
-        echo 'please enter all fields';
-    }
-    foreach ($_POST as $key => $val){
-        // data is an array... i think
-        $data[$key] = $val;
-        $_SESSION[$key] = $val;
-    }
-    date_split_formatter($data);
-    header('Location: meeting.php');
-}
-
-// splits dates into various SESSION variables to use on other pages
-function date_split_formatter($arr){
-    // using php explode to split data
-    list($date1_full, $date2_full) = explode('-', $_SESSION['datefilter']);
-    list($date1_month, $date1_day, $date1_year) = explode('/', $date1_full);
-    list($date2_month, $date2_day, $date2_year) = explode('/', $date2_full);
-    // setting various session variables
-    $_SESSION['$date1_full'] = $date1_full;
-    $_SESSION['$date2_full'] = $date2_full;
-    $_SESSION['$date1_month'] = $date1_month;
-    $_SESSION['$date1_day'] = $date1_day;
-    $_SESSION['$date1_year'] = $date1_year;
-    $_SESSION['$date2_month'] = $date2_month;
-    $_SESSION['$date2_day'] = $date2_day;
-    $_SESSION['$date2_year'] = $date2_year;
-}
-?>
 
 <!-- <?php include('./php/createEvent-handler.php'); ?> -->

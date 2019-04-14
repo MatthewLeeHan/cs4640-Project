@@ -32,13 +32,38 @@ body{
         height: auto;
         min-height: 70vh;
         .left-side{
-            width: 0px;
+            width: 40%;
+            flex-direction: column;
             display: flex;
             justify-content: center;
             align-items: center;
+            .instruction{
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
         }
         .right-side{
-
+            width: 40%;
+            .event_details{
+                text-align: center;
+                margin-top: 70px;
+                .event_desc{
+                    background-color: #f2f2f2;
+                    box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
+                    border-radius: 20px;
+                    width: fit-content;
+                    margin: 30px auto;
+                    height: 150px;
+                    p{
+                        padding: 20px 20px 0 20px;
+                    }
+                    .block-title{
+                        padding: 20px;
+                        margin-top: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
         .card{
             border-radius: 20px;

@@ -93,17 +93,22 @@ body {
       border-radius: 20px; }
       body .wrap .container .title-holder {
         text-align: center; }
+        body .wrap .container .title-holder .title_box .error {
+          color: red;
+          padding: 0;
+          text-align: center; }
         body .wrap .container .title-holder .title_box input {
           border: 0;
           outline: 0;
           background: transparent;
           border-bottom: 3px dotted gray;
           padding: 10px 12px 10px;
-          margin: 30px;
+          margin: 30px 30px 5px 30px;
           width: 450px;
           text-align: center;
           font-size: 30px; }
       body .wrap .container .details-holder {
+        margin-top: 40px;
         display: flex;
         justify-content: center; }
         body .wrap .container .details-holder .box {
@@ -128,6 +133,11 @@ body {
             height: 50px;
             font-size: 20px;
             text-align: center; }
+          body .wrap .container .details-holder .left .caldiv .error {
+            color: red;
+            margin-top: 4px; }
+        body .wrap .container .details-holder .right .error {
+          color: red; }
         body .wrap .container .details-holder .right #description {
           text-align: center;
           margin: 20px;

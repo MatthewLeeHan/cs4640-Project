@@ -29,13 +29,18 @@ body {
             .title-holder{
                 text-align: center;
                 .title_box{
+                    .error{
+                        color: red;
+                        padding: 0;
+                        text-align: center;
+                    }
                     input {
                         border: 0;
                         outline: 0;
                         background: transparent;
                         border-bottom: 3px dotted gray;
                         padding: 10px 12px 10px;
-                        margin: 30px;
+                        margin: 30px 30px 5px 30px;
                         width: 450px;
                         text-align: center;
                         font-size: 30px;
@@ -43,6 +48,7 @@ body {
                 }
             }
             .details-holder{
+                margin-top: 40px;
                 display: flex;
                 justify-content: center;
                 // the white card bg with rounded corners
@@ -72,9 +78,16 @@ body {
                             font-size: 20px;
                             text-align: center;
                         }
+                        .error{
+                            color: red;
+                            margin-top: 4px;
+                        }
                     }
                 }
                 .right{
+                    .error{
+                        color: red;
+                    }
                     #description{
                         text-align: center;
                         margin: 20px;

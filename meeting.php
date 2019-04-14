@@ -33,8 +33,21 @@ session_start();
     </header>
     <div class='container'>
         <div class='left-side card'>
+            <div class="instruction">
+                <h2>Select your availability below!</h2>
+            </div>
             <p><span id='display'></span></p>
             <table id='myTable'></table>
+        </div>
+        <div class="right-side card">
+            <div class="event_details">
+                <h1><?php echo $_SESSION['event_title'] ?></h1>
+                <div class="event_desc">
+                    <br>
+                    <span class='block-title'>Notes from the event creator:</span>
+                    <p><?php echo $_SESSION['event_desc'] ?></p>
+                </div>
+            </div>
         </div>
     </div>
 
