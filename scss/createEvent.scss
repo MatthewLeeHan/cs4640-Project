@@ -214,3 +214,69 @@ body {
         }
     }
 }
+
+@media only screen and (max-width: 400px){
+    body{
+        .wrap{
+            .container{
+                .title-holder{
+                    .title_box{
+                        input {
+                            width: 65%;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .details-holder{
+                    .box{
+                        width: 80%;
+                    }
+                    .left{
+                        height: 300px;
+                        #start{
+                            font-size: 16px;
+                        }
+                        .caldiv {
+                            #calendar{
+                                border-radius: 20px;
+                                background-color: #6495ED;
+                                color: #FFFFFF;
+                                border: none;
+                                width: 85%;
+                                min-width: 60%;
+                                height: 40px;
+                                font-size: 14px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .right{
+                        height: 420px;
+                        #description{
+                            font-size: 16px;
+                        }
+                        .textbox{
+                            margin: 20px;
+                            #event_desc{
+                                display: inline-flex;
+                                justify-content: center;
+                                width: 85%;
+                                height: 300px;
+                                border-radius: 20px;
+                                border: none;
+                                text-align: center;
+                                font-size: 14px;
+                                background-color: #F2F2F2;
+        
+                            }
+                            #event_desc:focus{
+                                outline: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

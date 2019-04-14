@@ -208,5 +208,44 @@ body {
       background-color: #F2F2F2; }
     body .wrap .container .details-holder .right .textbox #event_desc:focus {
       outline: 0; } }
+@media only screen and (max-width: 400px) {
+  body .wrap .container .title-holder .title_box input {
+    width: 65%;
+    font-size: 14px;
+    text-align: center; }
+  body .wrap .container .details-holder .box {
+    width: 80%; }
+  body .wrap .container .details-holder .left {
+    height: 300px; }
+    body .wrap .container .details-holder .left #start {
+      font-size: 16px; }
+    body .wrap .container .details-holder .left .caldiv #calendar {
+      border-radius: 20px;
+      background-color: #6495ED;
+      color: #FFFFFF;
+      border: none;
+      width: 85%;
+      min-width: 60%;
+      height: 40px;
+      font-size: 14px;
+      text-align: center; }
+  body .wrap .container .details-holder .right {
+    height: 420px; }
+    body .wrap .container .details-holder .right #description {
+      font-size: 16px; }
+    body .wrap .container .details-holder .right .textbox {
+      margin: 20px; }
+      body .wrap .container .details-holder .right .textbox #event_desc {
+        display: inline-flex;
+        justify-content: center;
+        width: 85%;
+        height: 300px;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+        background-color: #F2F2F2; }
+      body .wrap .container .details-holder .right .textbox #event_desc:focus {
+        outline: 0; } }
 
 /*# sourceMappingURL=createEvent.css.map */
