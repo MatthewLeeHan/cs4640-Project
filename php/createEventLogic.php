@@ -2,6 +2,9 @@
 $title_error_msg = '';
 $date_error_msg = '';
 $details_error_msg = '';
+$inputted_title = '';
+$inputted_date = '';
+$inputted_desc = '';
 
 $date = NULL;
 
@@ -12,13 +15,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(empty($_POST['event_title'])){
         $title_error_msg = 'Please enter an event title';
     }
-    if($_POST['datefilter'] == 'Click to select dates'){
+    $inputted_title = $_POST['event_title'];
+    if(empty($_POST['datefilter'])){
         $date_error_msg = 'Please select a date range';
     }
+    $inputted_date = $_POST['datefilter'];
     if(empty($_POST['event_desc'])){
         $details_error_msg = 'Please enter some details about your meeting';
     }
-    else{
+    $inputted_desc = $_POST['event_desc'];
+
+    if(!empty($_POST['event_title']) && !empty($_POST['datefilter']) && !empty($_POST['event_desc'])){
         foreach ($_POST as $key => $val){
             // data is an array... i think
             $data[$key] = $val;
