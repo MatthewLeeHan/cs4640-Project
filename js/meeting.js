@@ -26,10 +26,13 @@ function showInput() {
     x.setAttribute("style", "border-radius: 20px;");
     
     // Create table header
+
+    var date_list = [];
     
     if (month1 < month2) {
         for (i = day1; i <= dates_in_month[month1]; i++){
             var d = document.createTextNode(i);
+            date_list.push(d);
             var z = document.createElement("TD");
             z.setAttribute("id", "header1");
             z.setAttribute("style", "background-color:red; border-radius: 0px; border: none;");
@@ -39,6 +42,7 @@ function showInput() {
         }
         for (i = 1; i <= day2; i++){
             var d = document.createTextNode(i);
+            date_list.push(d);
             var z = document.createElement("TD");
             z.setAttribute("id", "header2");
             z.setAttribute("style", "background-color:red; border-radius: 0px; border: none;");
@@ -90,6 +94,7 @@ function showInput() {
                 var x = i;
             }
             var d = document.createTextNode(x);
+            date_list.push(d);
             var z = document.createElement("TD");
             z.setAttribute("id", "header");
             z.setAttribute("style", "background-color:red; border-radius: 0px; border: none;");
@@ -113,5 +118,4 @@ function showInput() {
             document.getElementById("myTr"+ String(i)).appendChild(z);
         }
     }
-    console.log(document.getElementById("myTD11"));
 }
