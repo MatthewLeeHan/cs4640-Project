@@ -34,7 +34,28 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $_SESSION[$key] = $val;
         }
         date_split_formatter($data);
-        header('Location: meeting.php?' . md5(uniqid(rand(), true)));
+        $rand_hashed_string = md5(uniqid(rand(), true));
+
+        require('connect-db.php');
+
+        $date = $_POST['datefilter'];
+        $event_title = $_POST['event_title'];
+        $event_description = $_POST['event_desc'];
+        $username = (string)$_COOKIE['user'];
+
+        $query = "INSERT INTO meeting_info VALUES(:date, :event_title, :event_description, :hash_value, :username)";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':event_title', $event_title);
+        $statement->bindValue(':event_description', $event_description);
+        $statement->bindValue(':date', $date);
+        $statement->bindValue(':hash_value', $rand_hashed_string);
+        $statement->bindValue(':username', $username);
+                
+        $statement->execute();
+        $statement->closeCursor();
+
+        header('Location: meeting.php?' . $username . "&" . $rand_hashed_string);
+
     }
 }
 
