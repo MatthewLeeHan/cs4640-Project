@@ -1,11 +1,7 @@
 <?php
 
-   if (count($_COOKIE) > 0){
-      foreach ($_COOKIE as $key => $value)
-      {
-         setcookie($key, '', time() - 3600);  
-      }
-   }
-   header("Location: ../index.html");
+unset($_COOKIE['user']);
+setcookie('user', '', time() - 3600, '/cs4640-project');
+header("Location: ../index.html");
 
 ?>

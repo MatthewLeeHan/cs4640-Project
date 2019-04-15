@@ -29,7 +29,6 @@ sudo ./manager-linux.run (or manager-linux-x64.run) -->
 	<title>ScheduleMe</title>
 	<link rel="stylesheet" href="./css/homePage.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
@@ -45,9 +44,13 @@ sudo ./manager-linux.run (or manager-linux-x64.run) -->
 				</div> 
 				<div class="btnHolder">
 					<a href = "./logIn.php"><button>Log in</button></a>
-					<a href = "" action = "./php/logout.php"><button>Log out</button></a>
 					<a href = "./signup.html"><button>Sign Up</button></a>
 					<a href = "./dashboard.html"><button>Dashboard</button></a>
+				</div>
+				<div class="logout">
+					<form class="logoutform" action="./php/logout.php" method="GET">
+						<button class="logout_btn">Log Out</button>
+					</form>
 				</div>
 			</header>
 		</div>

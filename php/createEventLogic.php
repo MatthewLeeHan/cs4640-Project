@@ -38,15 +38,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         require('connect-db.php');
 
-        $date = $_POST['datefilter'];
+        list($start_date, $end_date) = explode('-', $_POST['datefilter']);
         $event_title = $_POST['event_title'];
         $event_description = $_POST['event_desc'];
         $username = $_COOKIE['user'];
 
-        $query = "INSERT INTO meeting_info VALUES(:username, :date, :event_title, :event_description, :hash_value)";
+        $query = "INSERT INTO meeting VALUES(:username, :start_date, :end_date, :event_title, :event_description, :hash_value)";
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
-        $statement->bindValue(':date', $date);
+        $statement->bindValue(':start_date', $start_date);
+        $statement->bindValue(':end_date', $end_date);
         $statement->bindValue(':event_title', $event_title);
         $statement->bindValue(':event_description', $event_description);
         $statement->bindValue(':hash_value', $rand_hashed_string);
