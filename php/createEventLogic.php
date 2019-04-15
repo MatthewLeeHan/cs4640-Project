@@ -8,20 +8,22 @@ $inputted_desc = '';
 
 $date = NULL;
 
+// user defined array for error message output
+$error_msgs = array('Please enter an event title', 'Please select a date range', 'Please enter some details about your meeting');
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     // Input-validation on server side
     // if($_POST['event_title'] == '' || $_POST['datefilter'] == '' || $_POST['event_desc'] == ''){
     if(empty($_POST['event_title'])){
-        $title_error_msg = 'Please enter an event title';
+        $title_error_msg = $error_msgs[0];
     }
     $inputted_title = $_POST['event_title'];
     if(empty($_POST['datefilter'])){
-        $date_error_msg = 'Please select a date range';
+        $date_error_msg = $error_msgs[1];
     }
     $inputted_date = $_POST['datefilter'];
     if(empty($_POST['event_desc'])){
-        $details_error_msg = 'Please enter some details about your meeting';
+        $details_error_msg = $error_msgs[2];
     }
     $inputted_desc = $_POST['event_desc'];
 
@@ -36,9 +38,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
 }
 
-// splits dates into various SESSION variables to use on other pages
+// splits dates into various SESSION variables to use on other pages, my user-defined-function
 function date_split_formatter($arr){
-    // using php explode to split data
+    // using php explode to split data (built-in function)
     list($date1_full, $date2_full) = explode('-', $_SESSION['datefilter']);
     list($date1_month, $date1_day, $date1_year) = explode('/', $date1_full);
     list($date2_month, $date2_day, $date2_year) = explode('/', $date2_full);
