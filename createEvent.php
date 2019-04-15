@@ -67,10 +67,13 @@ include('./php/createEventLogic.php');
     </div>
     <input type="hidden" id='inputted_event_desc' value='<?php echo $inputted_desc; ?>'/>
 </body>
+
 <script>
 document.getElementById("event_desc").value = document.getElementById("inputted_event_desc").value;
 
 </script>
+
+
 </html>
 
 

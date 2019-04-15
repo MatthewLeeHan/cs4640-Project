@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $_SESSION[$key] = $val;
         }
         date_split_formatter($data);
-        header('Location: meeting.php');
+        header('Location: meeting.php?' . md5("createEvent"));
     }
 }
 
