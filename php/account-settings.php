@@ -48,6 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     }
             }
+            else{
+                header("Location: ../account-settings.html");
+            }
+        }
+        else{
+            header("Location: ../account-settings.html");
         }
     }
 }
