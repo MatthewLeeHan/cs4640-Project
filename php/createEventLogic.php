@@ -41,15 +41,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $date = $_POST['datefilter'];
         $event_title = $_POST['event_title'];
         $event_description = $_POST['event_desc'];
-        $username = (string)$_COOKIE['user'];
+        $username = $_COOKIE['user'];
 
-        $query = "INSERT INTO meeting_info VALUES(:date, :event_title, :event_description, :hash_value, :username)";
+        $query = "INSERT INTO meeting_info VALUES(:username, :date, :event_title, :event_description, :hash_value)";
         $statement = $db->prepare($query);
+        $statement->bindValue(':username', $username);
+        $statement->bindValue(':date', $date);
         $statement->bindValue(':event_title', $event_title);
         $statement->bindValue(':event_description', $event_description);
-        $statement->bindValue(':date', $date);
         $statement->bindValue(':hash_value', $rand_hashed_string);
-        $statement->bindValue(':username', $username);
                 
         $statement->execute();
         $statement->closeCursor();
