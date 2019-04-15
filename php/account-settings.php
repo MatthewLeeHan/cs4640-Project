@@ -1,8 +1,16 @@
 <?php
+
 // set error message variables to empty values before validation
-$pw_id_error_msg = '';
-$user_id_error_msg = '';
-$inputted_username = '';
+$old_pw_error_msg = '';
+$new_pw_error_msg = '';
+$new_pw_confirm_error_msg = '';
+
+
+function validateInput($old_pw_error_msg,$new_pw_error_msg,$new_pw_confirm_error_msg){
+    if(empty($_POST['old_pw']) || empty($_POST['new_pw']) || empty($_POST['new_pw_confirm'])){
+        echo "<script>alert('Please enter all fields!'); window.location.href='../account-settings.html';</script>";
+    }
+}
 
 require('connect-db.php');
 
@@ -15,6 +23,8 @@ function test_input($data) {
  }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    validateInput($old_pw_error_msg,$new_pw_error_msg,$new_pw_confirm_error_msg);
 
     if (!isset($_COOKIE['user'])){
         echo "<script>alert('Please log in first!'); window.location.href='../login.php';</script>";
