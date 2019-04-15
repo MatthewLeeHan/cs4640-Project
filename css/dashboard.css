@@ -1,81 +1,104 @@
 body {
-  font-family: 'Ubuntu', sans-serif; }
-  body .containerHeader {
-    width: 90%;
-    margin: 1vh auto; }
-  body header {
-    background-color: white;
-    height: 110px;
-    border: none; }
-    body header .logo {
-      float: left;
-      padding: 15px 0 0 0; }
-      body header .logo a {
-        text-decoration: none;
-        color: black; }
-    body header .btnHolder {
-      padding: 30px 0px 0 0px;
-      float: right; }
-      body header .btnHolder a {
-        text-decoration: none; }
-      body header .btnHolder button {
-        display: inline;
-        padding: 15px 30px 15px 30px;
-        border: none;
-        border-radius: 20px;
-        background-color: #87CEFA;
-        color: white;
-        font-size: 15px;
-        margin: 0 0 0 15px;
-        -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-        -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-        box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58); }
-      body header .btnHolder button:hover {
-        opacity: 1;
-        transform: scale(1.1) perspective(1px);
-        cursor: pointer; }
-      body header .btnHolder button:focus {
-        outline: 0; }
-  body #pageContent {
-    display: flex; }
-    body #pageContent .container {
-      border-radius: 20px;
-      margin: 1vh auto;
-      padding: 1px 0 60px 0;
-      background-color: #87CEFA;
-      -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      width: 45%; }
-      body #pageContent .container .heroText {
-        text-align: center; }
-      body #pageContent .container h1 {
-        color: white;
-        font-size: 4vw;
-        font-weight: 500;
-        margin-top: 5vh; }
-      body #pageContent .container h2 {
-        text-align: center;
-        font-weight: 500; }
-    body #pageContent .right button {
-      display: inline;
-      padding: 15px 30px 15px 30px;
-      border: none;
-      border-radius: 20px;
-      background-color: #f2f2f2;
-      color: black;
-      font-size: 15px;
-      -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58); }
-    body #pageContent .right button:hover {
-      opacity: 1;
-      transform: scale(1.1) perspective(1px);
-      cursor: pointer; }
-    body #pageContent .right button:focus {
-      outline: 0; }
-    body #pageContent .right .createEventBtn {
-      text-align: center;
-      margin-top: 30px; }
+  font-family: "Ubuntu", sans-serif;
+}
+body .containerHeader {
+  width: 90%;
+  margin: 1vh auto;
+}
+body header {
+  background-color: white;
+  height: 110px;
+  border: none;
+}
+body header .logo {
+  float: left;
+  padding: 15px 0 0 0;
+}
+body header .logo a {
+  text-decoration: none;
+  color: black;
+}
+body header .btnHolder {
+  padding: 30px 0px 0 0px;
+  float: right;
+}
+body header .btnHolder a {
+  text-decoration: none;
+}
+body header .btnHolder button {
+  display: inline;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #87CEFA;
+  color: white;
+  font-size: 15px;
+  margin: 0 0 0 15px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+body header .btnHolder button:hover {
+  opacity: 1;
+  transform: scale(1.1) perspective(1px);
+  cursor: pointer;
+}
+body header .btnHolder button:focus {
+  outline: 0;
+}
+body #pageContent {
+  display: flex;
+}
+body #pageContent .container {
+  border-radius: 20px;
+  margin: 1vh auto;
+  padding: 1px 0 60px 0;
+  background-color: #87CEFA;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  width: 45%;
+}
+body #pageContent .container .heroText {
+  text-align: center;
+}
+body #pageContent .container h1 {
+  color: white;
+  font-size: 4vw;
+  font-weight: 500;
+  margin-top: 5vh;
+}
+body #pageContent .container h2 {
+  text-align: center;
+  font-weight: 500;
+}
+body #pageContent .right button {
+  display: inline;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: black;
+  font-size: 15px;
+  -webkit-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+body #pageContent .right button:hover {
+  opacity: 1;
+  transform: scale(1.1) perspective(1px);
+  cursor: pointer;
+}
+body #pageContent .right button:focus {
+  outline: 0;
+}
+body #pageContent .right .createEventBtn {
+  text-align: center;
+  margin-top: 30px;
+}
+body #pageContent .right .changePasswordBtn {
+  text-align: center;
+  margin-top: 30px;
+}
 
 /*# sourceMappingURL=dashboard.css.map */

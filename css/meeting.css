@@ -20,125 +20,157 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Varela Round", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 div {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 h1 {
   font-size: 35px;
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 a {
   text-decoration: none;
-  color: white; }
+  color: white;
+}
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin: 20px;
-  color: black; }
-  body #row {
-    display: none; }
-  body #col {
-    display: none; }
-  body header {
-    background-color: white;
-    height: 110px;
-    border: none; }
-    body header .logo {
-      position: relative;
-      top: 30%;
-      text-align: center; }
-      body header .logo a {
-        text-decoration: none;
-        color: black; }
-  body .container {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    min-height: 70vh; }
-    body .container .left-side {
-      width: 40%;
-      flex-direction: column;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      body .container .left-side .instruction {
-        font-size: 24px;
-        margin-bottom: 30px; }
-    body .container .right-side {
-      width: 40%; }
-      body .container .right-side .event_details {
-        text-align: center;
-        margin-top: 70px; }
-        body .container .right-side .event_details .event_desc {
-          background-color: #f2f2f2;
-          box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-          border-radius: 20px;
-          width: fit-content;
-          margin: 30px auto;
-          height: 150px; }
-          body .container .right-side .event_details .event_desc p {
-            padding: 20px 20px 0 20px; }
-          body .container .right-side .event_details .event_desc .block-title {
-            padding: 20px;
-            margin-top: 20px;
-            font-weight: bold; }
-    body .container .card {
-      border-radius: 20px;
-      background-color: #87CEFA;
-      margin: 0 20px 0 20px;
-      box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
-      flex: 1 1 auto; }
-  body table, body td {
-    padding: 5px; }
-  body td {
-    height: 15px;
-    width: 30px;
-    border: 1px solid black;
-    border-radius: 20px; }
-  body #myTable {
-    margin: none;
-    padding: none;
-    background-color: white;
-    box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58); }
-  body td:hover {
-    background: rgba(44, 172, 165, 0.5); }
+  color: black;
+}
+body #row {
+  display: none;
+}
+body #col {
+  display: none;
+}
+body header {
+  background-color: white;
+  height: 110px;
+  border: none;
+}
+body header .logo {
+  position: relative;
+  top: 30%;
+  text-align: center;
+}
+body header .logo a {
+  text-decoration: none;
+  color: black;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  min-height: 70vh;
+}
+body .container .left-side {
+  width: 40%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .left-side .instruction {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+body .container .right-side {
+  width: 40%;
+}
+body .container .right-side .event_details {
+  text-align: center;
+  margin-top: 70px;
+}
+body .container .right-side .event_details .event_desc {
+  background-color: #f2f2f2;
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  border-radius: 20px;
+  width: fit-content;
+  margin: 30px auto;
+  height: 150px;
+}
+body .container .right-side .event_details .event_desc p {
+  padding: 20px 20px 0 20px;
+}
+body .container .right-side .event_details .event_desc .block-title {
+  padding: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+body .container .card {
+  border-radius: 20px;
+  background-color: #87CEFA;
+  margin: 0 20px 0 20px;
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+  flex: 1 1 auto;
+}
+body table, body td {
+  padding: 5px;
+}
+body td {
+  height: 15px;
+  width: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+body #myTable {
+  margin: none;
+  padding: none;
+  background-color: white;
+  box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
+}
+body td:hover {
+  background: rgba(44, 172, 165, 0.5);
+}
 
 /*# sourceMappingURL=meeting.css.map */

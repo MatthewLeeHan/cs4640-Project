@@ -110,12 +110,12 @@ body{
             // justify-content: center;
             // align-content: center;
             flex-direction: column;
-            .idinput{
+            .old_pw_holder{
                 padding: 0px 0 60px 0;
                 // display: flex;
                 // justify-content: center;
                 // flex-direction: column;
-                #user_id{
+                #old_pw{
                     border: 0;
                     outline: 0;
                     background: transparent;
@@ -131,11 +131,11 @@ body{
                     margin-top: 10px;
                 }
             }
-            .pwinput{
+            .new_pw_holder{
                 padding: 0px 0px 80px 0px;
                 // display: flex;
                 // justify-content: center;
-                #password{
+                #new_pw{
                     border: 0;
                     outline: 0;
                     background: transparent;
@@ -145,7 +145,12 @@ body{
                     font-size: 20px;
                     font-family: 'Karla', sans-serif;
                 }
-                #password2{
+            }
+            .new_pw_confirm_holder{
+                padding: 0px 0px 80px 0px;
+                // display: flex;
+                // justify-content: center;
+                #new_pw_confirm{
                     border: 0;
                     outline: 0;
                     background: transparent;
@@ -153,11 +158,7 @@ body{
                     width: 500px;
                     height: 70px;
                     font-size: 20px;
-                    font-family: 'Karla', sans-serif;                    
-                }
-                #pw_id_error{
-                    color: red;
-                    margin-top: 10px;
+                    font-family: 'Karla', sans-serif;
                 }
             }
             .submitbtn{

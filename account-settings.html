@@ -25,18 +25,18 @@
         <div class="container">
                 <h2>Change your password</h2>
                 <div class="form-holder">
-                        <form name="loginform" action="" method="POST">
-                            <div class = "idinput">
-                                <input type="text" id="user_id" name="user_id" placeholder="Old password" value=""> 
+                        <form name="loginform" action="./php/account-settings.php" method="POST">
+                            <div class = "old_pw_holder">
+                                <input type="password" id="old_pw" name="old_pw" placeholder="Old password" value=""> 
                                 <br>
                                 <div id="user_id_error"></div>
                             </div>
-                            <div class = "pwinput">
-                                <input type="password" id="password" name="password" placeholder="New password"> <br>
+                            <div class = "new_pw_holder">
+                                <input type="password" id="new_pw" name="new_pw" placeholder="New password"> <br>
                                 <div id="pw_id_error"></div>
                             </div>
-                            <div class = "pwinput">
-                                    <input type="password" id="password2" name="password2" placeholder="Confirm new password"> <br>
+                            <div class = "new_pw_confirm_holder">
+                                    <input type="password" id="new_pw_confirm" name="new_pw_confirm" placeholder="Confirm new password"> <br>
                                     <div id="pw_id_error"></div>
                             </div>
                             <div class = "submitbtn">
