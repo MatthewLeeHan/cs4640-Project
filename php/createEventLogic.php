@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $statement->execute();
         $statement->closeCursor();
 
-        header('Location: meeting.php?' . $username . "&" . $rand_hashed_string);
+        header('Location: meeting.php?' . $username . "#" . $rand_hashed_string);
 
     }
 }

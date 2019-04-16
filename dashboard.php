@@ -47,7 +47,7 @@
                 foreach ($results as $result){
                     $dt = (new DateTime())->format('m/d/Y');
                     if ($dt > $result['start_date']){
-                        echo "<a href='meeting.php?" .  $result['username'] . "&" . $result['hashed_value'] . "'>" .
+                        echo "<a href='meeting.php?" .  $result['username'] . "#" . $result['hashed_value'] . "'>" .
                         "<button>" . $result['event_title'] . "</button>" . "</a>" . $result['event_description'] . "<br>";
                     }
                 }
@@ -80,7 +80,7 @@
                 foreach ($results as $result){
                     $dt = (new DateTime())->format('m/d/Y');
                     if ($dt < $result['start_date']){
-                        echo "<a href='meeting.php?" .  $result['username'] . "&" . $result['hashed_value'] . "'>" .
+                        echo "<a href='meeting.php?" .  $result['username'] . "#" . $result['hashed_value'] . "'>" .
                         "<button>" . $result['event_title'] . "</button>" . "</a>" . $result['event_description'] . "<br>";
                     }
                 }
