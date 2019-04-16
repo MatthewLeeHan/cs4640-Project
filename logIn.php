@@ -1,48 +1,75 @@
-<!-- Jiwon Cha (jc4va) -->
-<?php include('./php/login.php'); ?>
+<?php
+// set error message variables to empty values before validation
+$pw_id_error_msg = '';
+$user_id_error_msg = '';
+$inputted_username = '';
+$id_error_msg = '';
 
-<!DOCTYPE html>
-<html lang="en">
+require('connect-db.php');
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>ScheduleMe : Log In</title>
-	<link rel="stylesheet" href="./css/login.css" />
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-</head>
+// to prevent exploits - cyber sec
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+ }
 
-<body>
-	<header>
-		<div class="logo">
-			<h1><a href="index.html"> ScheduleMe </a></h1>
-		</div>
-	</header>
-	<div class="card-container">
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // input validation
+    // validating user id input
+    if(empty($_POST['user_id'])){
+        $user_id_error_msg = 'Please enter a username, buddy.';
+    }
+    else{
+        $username = test_input($_POST['user_id']);
+        // saving last input for easier usability - no need to retype
+        $inputted_username = test_input($_POST['user_id']);
+    }
+    // validating password input
+    if(empty($_POST['password'])){
+        $pw_id_error_msg = 'Please enter a password, buddy.';
+    }
+    else{
+        $pwd = md5(test_input($_POST['password']));
+    }
 
-		<div class="form-holder">
-			<form name="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-				<div class = "idinput">
-					<input type="text" id="user_id" name="user_id" placeholder="User ID" value="<?php echo $inputted_username ?>"> 
-					<br>
-					<div id="user_id_error"><?php echo $user_id_error_msg ?></div>
-				</div>
-				<div class = "pwinput">
-					<input type="password" id="password" name="password" placeholder="Password"> <br>
-					<div id="pw_id_error"><?php echo $pw_id_error_msg ?></div>
-				</div>
-				<div class = "submitbtn">
-					<input type="submit" id="submit" name="submit" value="Log In">
-					<div id="id_error"><?php echo $id_error_msg ?></div>
-				</div>
-			</form>
-		</div>
-	</div>
+    // $username = trim($_POST["user_id"]);
+    // $pwd = md5(trim($_POST["password"]));
 
-	<div id="login_error"></div>
+    $query = "SELECT * FROM user WHERE username = :username";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $username);
+    $statement->execute();
 
-	<!-- <script type="text/javascript" src="./js/login.js"></script> -->
-</body>
-</html>
+    $results = $statement->fetchAll();
+
+    if (empty($results)){
+        // header('Location: ../logIn.php');
+    }
+    else{
+        foreach ($results as $result){
+            $db_hash = $result['password'];
+            if (count($results) == 1) {
+                if ($pwd == $db_hash){
+
+                    $user = array(
+                        'username' => $username,
+                        'pwd' => $pwd,
+                    );
+                    // setcookie's value MUST be a string
+                    // + 3600 ... * 3600 was going over limit
+                    setcookie('user', $username, time() + 3600);
+                    
+                    header('Location: ./dashboard.html');
+
+                }
+                else{
+                    // header('Location: ./logIn.php');
+                    $id_error_msg = 'This account does not exist';
+                }
+            }
+        }
+    }
+}
+?>
