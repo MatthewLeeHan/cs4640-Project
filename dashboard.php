@@ -35,17 +35,22 @@
 
             require('./php/connect-db.php');
 
-            $username = $_COOKIE['user'];
+            if (!isset($_COOKIE['user'])){
+                echo "<script>alert('Please log in first!'); window.location.href='./login.php';</script>";
+            }
+            else{
+                $username = $_COOKIE['user'];
 
-            $query = "SELECT * FROM meeting WHERE username = :username";
-            $statement = $db->prepare($query);
-            $statement->bindValue(':username', $username);
-            $statement->execute();
+                $query = "SELECT * FROM meeting WHERE username = :username";
+                $statement = $db->prepare($query);
+                $statement->bindValue(':username', $username);
+                $statement->execute();
 
-            $results = $statement->fetchAll();
+                $results = $statement->fetchAll();
 
-            foreach ($results as $result){
-                echo "<button>" . $result['event_title'] . "</button>" . $result['event_description'] . "<br>";
+                foreach ($results as $result){
+                    echo "<button>" . $result['event_title'] . "</button>" . $result['event_description'] . "<br>";
+                }
             }
 
             ?>
