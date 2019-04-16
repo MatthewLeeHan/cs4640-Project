@@ -12,7 +12,10 @@ body{
     header{
         background-color: white;
         height: 110px;
-        border: none;
+        // border: 1px solid black;
+        display: flex;
+
+
         .logo{
             float: left;
             padding: 40px 0 0 0;
@@ -24,8 +27,9 @@ body{
         }
         .btnHolder{
             padding: 30px 0px 0 0px;
-            // float: right;
             display: flex;
+            width: 100%;
+            justify-content: flex-end;
             button{
                 // display: inline;
                 padding: 15px 30px 15px 30px;
@@ -40,6 +44,7 @@ body{
                 box-shadow: 0px 6px 22px -3px rgba(74,113,135,0.58);
             }a{
                 padding: 0 5px 0 5px;
+                
             }
             button:hover{
                 // background-color: #6495ED;
@@ -145,6 +150,9 @@ body{
             background-color: white;
             height: 110px;
             border: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .logo{
                 // float: left;
                 padding: 40px 0 0 30px;
@@ -156,8 +164,9 @@ body{
             .btnHolder{
                 // padding: 0px 10px 0 30px;
                 // float: right;
-                border: 1px solid black;
+                justify-content: center;
                 align-items: center;
+                // border: 1px solid black;
                 margin: 0 auto;
                 button{
                     display: inline;
@@ -171,6 +180,7 @@ body{
             }
         }
         .container{
+            margin-top: 50px;
             h1{
                 font-size: 8vw;
                 line-height: 8vh;
