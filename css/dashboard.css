@@ -72,7 +72,7 @@ body #pageContent .container h2 {
   text-align: center;
   font-weight: 500;
 }
-body #pageContent .right button {
+body #pageContent .left button, body #pageContent .right button {
   display: inline;
   padding: 15px 30px 15px 30px;
   border: none;
@@ -84,19 +84,19 @@ body #pageContent .right button {
   -moz-box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
   box-shadow: 0px 6px 22px -3px rgba(74, 113, 135, 0.58);
 }
-body #pageContent .right button:hover {
+body #pageContent .left button:hover, body #pageContent .right button:hover {
   opacity: 1;
   transform: scale(1.1) perspective(1px);
   cursor: pointer;
 }
-body #pageContent .right button:focus {
+body #pageContent .left button:focus, body #pageContent .right button:focus {
   outline: 0;
 }
-body #pageContent .right .createEventBtn {
+body #pageContent .left .createEventBtn, body #pageContent .right .createEventBtn {
   text-align: center;
   margin-top: 30px;
 }
-body #pageContent .right .changePasswordBtn {
+body #pageContent .left .changePasswordBtn, body #pageContent .right .changePasswordBtn {
   text-align: center;
   margin-top: 30px;
 }

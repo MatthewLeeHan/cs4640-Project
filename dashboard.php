@@ -26,6 +26,35 @@
     <div id="pageContent">
         <div class="left container">
             <h2>Past Events</h2>
+
+            <?php
+
+            require('./php/connect-db.php');
+
+            if (!isset($_COOKIE['user'])){
+                echo "<script>alert('Please log in first!'); window.location.href='./login.php';</script>";
+            }
+            else{
+                $username = $_COOKIE['user'];
+
+                $query = "SELECT * FROM meeting WHERE username = :username";
+                $statement = $db->prepare($query);
+                $statement->bindValue(':username', $username);
+                $statement->execute();
+
+                $results = $statement->fetchAll();
+
+                foreach ($results as $result){
+                    $dt = (new DateTime())->format('m/d/Y');
+                    if ($dt > $result['start_date']){
+                        echo "<a href='meeting.php?" .  $result['username'] . "&" . $result['hashed_value'] . "'>" .
+                        "<button>" . $result['event_title'] . "</button>" . "</a>" . $result['event_description'] . "<br>";
+                    }
+                }
+            }
+
+            ?>
+
             <!-- past events from database can dynamically load in here -->
         </div>
         <div class="right container">
@@ -49,7 +78,11 @@
                 $results = $statement->fetchAll();
 
                 foreach ($results as $result){
-                    echo "<button>" . $result['event_title'] . "</button>" . $result['event_description'] . "<br>";
+                    $dt = (new DateTime())->format('m/d/Y');
+                    if ($dt < $result['start_date']){
+                        echo "<a href='meeting.php?" .  $result['username'] . "&" . $result['hashed_value'] . "'>" .
+                        "<button>" . $result['event_title'] . "</button>" . "</a>" . $result['event_description'] . "<br>";
+                    }
                 }
             }
 
