@@ -31,6 +31,27 @@
         <div class="right container">
             <h2>Upcoming Events</h2>
 
+            <?php
+
+            require('./php/connect-db.php');
+
+            $username = $_COOKIE['user'];
+
+            $query = "SELECT * FROM meeting WHERE username = :username";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':username', $username);
+            $statement->execute();
+
+            $results = $statement->fetchAll();
+
+            print_r();
+
+            foreach ($results as $result){
+                echo "<button>" . $result['event_title'] . "</button></a>";
+            }
+
+            ?>
+
             <!-- upcoming/current events can dynamically load in here -->
 
             <!-- press this button to create a new event! -->
