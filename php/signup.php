@@ -24,7 +24,7 @@
             exit();
         }
         else{
-            header("Location: http://localhost/cs4640-project/signup.html");
+            header("Location: ../index.html");
             exit();
         }
     }
