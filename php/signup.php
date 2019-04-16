@@ -20,7 +20,7 @@
             $statement->execute();
             $statement->closeCursor();
 
-            header("Location: http://localhost/cs4640-project/");
+            header("Location: ../logIn.php");
             exit();
         }
         else{
