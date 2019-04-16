@@ -44,7 +44,7 @@
 
             $results = $statement->fetchAll();
 
-            print_r();
+            print_r($results);
 
             foreach ($results as $result){
                 echo "<button>" . $result['event_title'] . "</button></a>";
