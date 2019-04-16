@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // + 3600 ... * 3600 was going over limit
                     setcookie('user', $username, time() + 3600);
                     
-                    header('Location: ../dashboard.html');
+                    header('Location: dashboard.html');
 
                 }
                 else{
