@@ -14,7 +14,7 @@
 	<div class="containerHeader">
 		<header>
 			<div class="logo">
-				<h1><a href = "index.html"> ScheduleMe </a></h1>
+				<h1><a href = "index.php"> ScheduleMe </a></h1>
             </div> 
             <div class="btnHolder">
                 <a href = "./php/logout.php"><button>Log out</button></a>

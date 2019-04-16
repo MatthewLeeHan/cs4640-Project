@@ -28,7 +28,7 @@ session_start();
 <body onload='showInput()'>
     <header>
         <div class="logo">
-            <h1><a href="index.html"> ScheduleMe </a></h1>
+            <h1><a href="index.php"> ScheduleMe </a></h1>
         </div>
     </header>
     <div class='container'>

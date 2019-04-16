@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $statement->closeCursor();   
 
                         echo '<script type="text/javascript">alert("Password successfully changed")</script>';
-                        header("Location: ../index.html");
+                        header("Location: ../index.php");
 
                     }
             }
