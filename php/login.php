@@ -3,6 +3,7 @@
 $pw_id_error_msg = '';
 $user_id_error_msg = '';
 $inputted_username = '';
+$id_error_msg = '';
 
 require('connect-db.php');
 
@@ -60,11 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // + 3600 ... * 3600 was going over limit
                     setcookie('user', $username, time() + 3600);
                     
-                    header('Location: ./createEvent.php');
+                    header('Location: ../dashboard.html');
 
                 }
                 else{
-                    header('Location: ./logIn.php');
+                    // header('Location: ./logIn.php');
+                    $id_error_msg = 'This account does not exist';
                 }
             }
         }

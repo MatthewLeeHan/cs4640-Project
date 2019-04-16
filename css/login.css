@@ -144,6 +144,10 @@ body {
       font-size: 25px;
       font-family: 'Karla', sans-serif;
       border-radius: 15px; }
+    body form .submitbtn #id_error {
+      text-align: center;
+      color: red;
+      margin-top: 15px; }
     body form .disabled {
       border: 1px solid #999999;
       background-color: #cccccc;

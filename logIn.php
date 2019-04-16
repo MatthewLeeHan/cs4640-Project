@@ -35,6 +35,7 @@
 				</div>
 				<div class = "submitbtn">
 					<input type="submit" id="submit" name="submit" value="Log In">
+					<div id="id_error"><?php echo $id_error_msg ?></div>
 				</div>
 			</form>
 		</div>
