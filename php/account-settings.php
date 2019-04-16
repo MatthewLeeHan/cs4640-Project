@@ -1,75 +1,47 @@
-<?php
-
-// set error message variables to empty values before validation
-$old_pw_error_msg = '';
-$new_pw_error_msg = '';
-$new_pw_confirm_error_msg = '';
-
-
-function validateInput($old_pw_error_msg,$new_pw_error_msg,$new_pw_confirm_error_msg){
-    if(empty($_POST['old_pw']) || empty($_POST['new_pw']) || empty($_POST['new_pw_confirm'])){
-        echo "<script>alert('Please enter all fields!'); window.location.href='../account-settings.html';</script>";
-    }
-}
-
-require('connect-db.php');
-
-// to prevent exploits - cyber sec
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
- }
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    validateInput($old_pw_error_msg,$new_pw_error_msg,$new_pw_confirm_error_msg);
-
-    if (!isset($_COOKIE['user'])){
-        echo "<script>alert('Please log in first!'); window.location.href='../login.php';</script>";
-    }
-
-    else{
-        
-        $username = $_COOKIE['user'];
-        $pwd = md5(test_input($_POST['old_pw']));
-
-        $query = "SELECT * FROM user WHERE username = :username";
-        $statement = $db->prepare($query);
-        $statement->bindValue(':username', $username);
-        $statement->execute();
-
-        $results = $statement->fetchAll();
-
-        if(empty($results)){
-            foreach ($results as $result){
-                $db_hash = $result['password'];
-                if (count($results) == 1) {
-                    if ($pwd == $db_hash){
-                        if ($_POST['new_pw'] == $_POST['new_pw_confirm']){
-                            $password = md5($_POST['new_pw']);
-                            $update_query = "UPDATE user SET password=:password WHERE username=:username";
-                            $statement = $db->prepare($update_query);
-                            $statement->bindValue(':username', $username);
-                            $statement->bindValue(':password', $password);
-                            $statement->execute();
-                            $statement->closeCursor();   
-
-                            echo '<script type="text/javascript">alert("Password successfully changed")</script>';
-                            header("Location: ../index.html");
-
-                        }
-                }
-                else{
-                    header("Location: ../account-settings.html");
-                }
-            }
-            else{
-                header("Location: ../account-settings.html");
-            }
-        }
-    }
-}
-}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="./css/account-settings.css"/>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="containerHeader">
+        <header>
+            <div class="logo">
+                <a href="./dashboard.html"><button><i class="fas fa-arrow-left"></i></button></a>
+                <h1><a href = "index.html"> ScheduleMe </a></h1>
+            </div> 
+            <div class="btnHolder">
+                <a href = "./php/logout.php"><button>Log out</button></a>
+            </div>
+        </header>
+    </div>
+    <div id="pageContent">
+        <div class="container">
+                <h2>Change your password</h2>
+                <div class="form-holder">
+                        <form name="loginform" action="./php/account-settings.php" method="POST">
+                            <div class = "old_pw_holder">
+                                <input type="password" id="old_pw" name="old_pw" placeholder="Old password" value=""> 
+                                <br>
+                            </div>
+                            <div class = "new_pw_holder">
+                                <input type="password" id="new_pw" name="new_pw" placeholder="New password"> <br>
+                            </div>
+                            <div class = "new_pw_confirm_holder">
+                                <input type="password" id="new_pw_confirm" name="new_pw_confirm" placeholder="Confirm new password"> <br>
+                            </div>
+                            <div class = "submitbtn">
+                                <input type="submit" id="submit" name="submit" value="Change password">
+                            </div>
+                        </form>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
