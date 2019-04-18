@@ -121,6 +121,7 @@ function showInput() {
     document.querySelectorAll('#myTable td')
     .forEach(e => e.addEventListener("click", function() {
         // Here, `this` refers to the element the event was hooked on
-        e.style.color = "blue";
+        e.style.color = "white";
+        e.style.background = "#6495ED";
     }));
 }
