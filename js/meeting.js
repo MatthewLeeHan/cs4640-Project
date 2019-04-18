@@ -18,7 +18,6 @@ function showInput() {
     }
 
     var rows = '16';
-    console.log(rows, cols);
 
     // var x = document.createElement("TABLE");
     // x.setAttribute("id", "myTable");
@@ -118,4 +117,10 @@ function showInput() {
             document.getElementById("myTr"+ String(i)).appendChild(z);
         }
     }
+
+    document.querySelectorAll('#myTable td')
+    .forEach(e => e.addEventListener("click", function() {
+        // Here, `this` refers to the element the event was hooked on
+        e.style.color = "blue";
+    }));
 }
