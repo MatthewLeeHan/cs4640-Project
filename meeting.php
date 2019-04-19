@@ -41,30 +41,46 @@ session_start();
         </div>
         <div class="right-side card">
             <div class="event_details">
-                <h1><?php echo $_SESSION['event_title'] ?></h1>
+                <h1>Event title: <?php echo $_SESSION['event_title'] ?></h1>
                 <div class="event_desc">
                     <br>
                     <span class='block-title'>Notes from the event creator:</span>
                     <p><?php echo $_SESSION['event_desc'] ?></p>
+                </div>
+                <h1> <span class='block-title'>Members:</span> </h1>
+                <br>
+                <div class="createEventBtn">
+                    <h2>Member sign up </h2>
+                    <form name="signupform">
+                        <div class="nameinput">
+                            <p> Enter your name: </p>
+                            <input type="text" id="name" name="name" placeholder="Name"> <br>
+                            <div id="name_error"></div>
+                        </div>
+                        <div class="submitbtn">
+                            <input type="submit" id="submit" name="submit" value="Sign Up">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- To read data from session variables -->
-    <input id='row' value='<?php echo $_SESSION['$date1_day']; ?>'/>
-    <input id='col' value='<?php echo $_SESSION['$date2_day']; ?>'/>
-    <input type="hidden" id='month1' value='<?php echo $_SESSION['$date1_month']; ?>'/>
-    <input type="hidden" id='month2' value='<?php echo $_SESSION['$date2_month']; ?>'/>
-    <input type="hidden" id='year1' value='<?php echo $_SESSION['$date1_year']; ?>'/>
-    <input type="hidden" id='year2' value='<?php echo $_SESSION['$date2_year']; ?>'/>
-    <input type="hidden" id='full_date1' value='<?php echo $_SESSION['$date1_full']; ?>'/>
-    <input type="hidden" id='full_date2' value='<?php echo $_SESSION['$date2_full']; ?>'/>
+    <input id='row' value='<?php echo $_SESSION['$date1_day']; ?>' />
+    <input id='col' value='<?php echo $_SESSION['$date2_day']; ?>' />
+    <input type="hidden" id='month1' value='<?php echo $_SESSION['$date1_month']; ?>' />
+    <input type="hidden" id='month2' value='<?php echo $_SESSION['$date2_month']; ?>' />
+    <input type="hidden" id='year1' value='<?php echo $_SESSION['$date1_year']; ?>' />
+    <input type="hidden" id='year2' value='<?php echo $_SESSION['$date2_year']; ?>' />
+    <input type="hidden" id='full_date1' value='<?php echo $_SESSION['$date1_full']; ?>' />
+    <input type="hidden" id='full_date2' value='<?php echo $_SESSION['$date2_full']; ?>' />
 
     <!-- This will pass the number of dates (number of columns in the table) to javascript as a hidden value -->
-    <input type="hidden" id="diff" name="diff" value='<?php echo $_SESSION['$date2_day'] - $_SESSION['$date1_day'] + 1; ?>'/>
+    <input type="hidden" id="diff" name="diff"
+        value='<?php echo $_SESSION['$date2_day'] - $_SESSION['$date1_day'] + 1; ?>' />
 
-<!-- 
+    <!-- 
     <input type="submit" onclick="showInput()"><br />
     <label>Your input: </label> -->
     <script type="text/javascript" src="./js/meeting.js"></script>

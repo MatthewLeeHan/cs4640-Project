@@ -117,8 +117,11 @@ function showInput() {
             document.getElementById("myTr"+ String(i)).appendChild(z);
         }
     }
+    availability_clicked("myTable");
+}
 
-    document.querySelectorAll('#myTable td')
+function availability_clicked(table){
+    document.querySelectorAll('#' + table + 'td')
     .forEach(e => e.addEventListener("click", function() {
         // Here, `this` refers to the element the event was hooked on
         e.style.color = "white";
