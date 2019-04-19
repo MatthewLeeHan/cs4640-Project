@@ -51,11 +51,10 @@ session_start();
                 <br>
                 <div class="createEventBtn">
                     <h2>Member sign up </h2>
-                    <form name="signupform">
+                    <form name="signupform" method="meeting.php" method="GET">
                         <div class="nameinput">
                             <p> Enter your name: </p>
                             <input type="text" id="name" name="name" placeholder="Name"> <br>
-                            <div id="name_error"></div>
                         </div>
                         <div class="submitbtn">
                             <input type="submit" id="submit" name="submit" value="Sign Up">
@@ -65,6 +64,10 @@ session_start();
             </div>
         </div>
     </div>
+
+    <?php
+        setcookie('member', $_GET['name'], time() + 3600);
+    ?>
 
     <!-- To read data from session variables -->
     <input id='row' value='<?php echo $_SESSION['$date1_day']; ?>' />
