@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: '../index.php',
+  styleUrls: ['../css/homepage.css']
 })
 export class AppComponent {
   title = 'cs4640-project-angular';

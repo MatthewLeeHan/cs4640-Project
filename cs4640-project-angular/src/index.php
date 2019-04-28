@@ -1,31 +1,3 @@
- <!-- Matthew Han (mlh6fc) -->
-
- <!-- 
-
-	Special helpers: Jane Kim 
-	Jane helped us with server side validation (php) - translating the logic from javascript to php
-
-
-
-	Matthew: 
-	- DOM
-	- Error messages
-	- Responsiveness
-	Jiwon: 
-	- Cookie
-	- GET requests
-
-	- Select values 
-  -->
-
-<!-- *** TO START SCSS -> CSS WATCHING -->
-<!-- $ sass --watch scss:css
- -->
-<!-- *** TO START XAMPP - LINUX UBUNTU MINT *** -->
- <!-- cd /opt/lampp
-
-sudo ./manager-linux.run (or manager-linux-x64.run) -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

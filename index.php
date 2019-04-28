@@ -62,6 +62,7 @@ sudo ./manager-linux.run (or manager-linux-x64.run) -->
 					?>
 					<a href = "./signup.html"><button>Sign Up</button></a>
 					<a href = "./dashboard.php"><button>Dashboard</button></a>
+					<a href = "localhost:4200"><button>Angular</button></a>
 				</div>
 			</header>
 		</div>
