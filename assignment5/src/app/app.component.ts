@@ -8,7 +8,7 @@ import { Order } from './order';
 })
 
 export class AppComponent {
-  title = 'inclass12';
+  title = 'Give us feedback';
   drinks = ['Coffee', 'Tea', 'Milk'];
   orderModel = new Order('Jiwon', 'jc4va@virginia.edu', 3143326259, '', '', true);
 }
