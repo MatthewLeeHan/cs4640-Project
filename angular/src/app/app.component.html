@@ -1,70 +1,68 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div class="container">
   <h1>
-    {{ title }}!
+    {{ title }}
   </h1>
 
-  <!--
-  {{ orderForm.value | json }} 
-
-  {{ orderModel | json }}
-
-  -->
-
-<form #orderForm="ngForm">
-  <div class="form-group">
-    <label>Name: </label>
-    <input [(ngModel)]="orderModel.name" 
-    required
-    #name = "ngModel"
-    [class.is-invalid] = "name.invalid && name.touched"
-    type="text" class="form-control" name="name">
-    <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is requried</small> 
-
-    Is name input valid? {{ name.valid }}
-    <br/>
-    Has name input been visited? {{ name.touched }}
-    <br/>
-    Has name input been changed? {{ name.dirty }}
-    <br/>   
-
-  </div>
-
-  <div class="form-group">
-    <label>Email: </label>
-    <input [(ngModel)]="orderModel.email" type="email" class="form-control" name="email">
-  </div>
-
-  <div class="form-group">
-    <label>Phone: </label>
-    <input [(ngModel)]="orderModel.phone" type="tel" class="form-control" name="phone">
-  </div>
- 
-  <div class="form-group">
-    <select [(ngModel)]="orderModel.drink" class="custom-select" name="drink_option">
-      <option value="">What would you like to drink? </option>
-      <option *ngFor="let drink of drinks">{{drink}} </option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label>Hot or cold?</label>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tempPreference" value="hot">
-      <label class="form-check-label">Hot</label>
+  Display data received from the back end <br/>
+  response data = {{ responsedata | json}}
+  <br/>
+  <hr/>
+  Data binding exercise 
+  <br/>
+  {{ orderForm.value | json }}
+  <br/>
+  {{ orderModel | json }} 
+  <hr/>
+  <div class="custom-container">
+  <form #orderForm="ngForm" name="helpForm">
+    <div class="form-group">
+      <label>Name: </label>
+      <input onfocus="this.value=''" required #name="ngModel" 
+             [class.is-invalid]="name.invalid"
+             [(ngModel)]="orderModel.name" type="text" class="form-control" name="name">
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is requried</small>
     </div>
-    <div class="form-check">
-      <input [(ngModel)]="orderModel.tempPreference" class="form-check-input" type="radio" name="tempPreference" value="cold"> 
-      <label class="form-check-label">Cold</label>
+
+    <div class="form-group">
+      <label>Email: </label>
+      <input onfocus="this.value=''" [(ngModel)]="orderModel.email" type="email" class="form-control" name="email">
     </div>
-  </div>
+
+    <div class="form-group">
+      <label>Phone: </label>
+      <input onfocus="this.value=''" type="tel" class="form-control" required
+          #phone="ngModel" pattern="^\d{10}$" 
+          [class.is-invalid]="phone.invalid && phone.touched" 
+          [(ngModel)]="orderModel.phone"  name="phone">
+      <small ng-show="helpForm.phone.$invalid" class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number is required and must be 10 digits</small>
+    </div>
+
+    <!-- <div class="form-group">
+      <select [(ngModel)]="orderModel.drink" class="custom-select" name="drink">
+        <option value="">What would you like to drink? </option>
+        <option *ngFor="let drink of drinks">{{drink}} </option>
+      </select>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label>Hot or cold?</label>
+      <div class="form-check">
+        <input [(ngModel)]="orderModel.tempPreference" class="form-check-input" type="radio" name="tempPreference" value="hot">
+        <label class="form-check-label">Hot</label>
+      </div>
+      <div class="form-check">
+        <input [(ngModel)]="orderModel.tempPreference" class="form-check-input" type="radio" name="tempPreference" value="cold"> 
+        <label class="form-check-label">Cold</label>
+      </div>
+    </div> -->
   
-  <div class="form-check mb-3">
-    <input [(ngModel)]="orderModel.sendmsg" class="form-check-input" type="checkbox" name="sendmsg">
-    <input class="form-check-input" type="checkbox" name="sendtxt">
-    <label class="form-check-label">Send me a text message when my order is ready </label>
-  </div>
+    <!-- <div class="form-check mb-3">
+      <input [(ngModel)]="orderModel.sendText" class=" form-check-input" type="checkbox" name="sendtxt">
+      <label class="form-check-label">Send me a text message when my order is ready </label>
+    </div> -->
     
-  <button class="btn btn-primary">Place order</button>
-</form>  
+    <button class="btn btn-primary" (click)="senddata(orderForm.value)">Get Help</button>
+  </form>
+</div>
 </div>
