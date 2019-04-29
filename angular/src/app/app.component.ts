@@ -17,7 +17,7 @@ export class AppComponent {
   responsedata = 'response data';
 
   // drinks = ['Coffee', 'Tea', 'Milk'];
-  orderModel = new Order('Your Name Here', 'Your Email Here', 7777777777);
+  orderModel = new Order('Your Name Here', 'Your Email Here', 7777777777, 'Your message here');
  
   constructor(private http: HttpClient) { }
 

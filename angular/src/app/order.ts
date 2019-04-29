@@ -3,6 +3,7 @@ export class Order {
        public name: string,
        public email: string,
        public phone: number,
+       public text: string,
       //  public drink: string,
       //  public tempPreference: string,
       //  public sendText: boolean,
