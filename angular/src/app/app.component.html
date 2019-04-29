@@ -1,10 +1,10 @@
 
 <div class="container">
-  <h1>
+  <h1 class="title">
     {{ title }}
   </h1>
-
-  Display data received from the back end <br/>
+  <h2 class="welcoming-hi" *ngIf="orderModel.name != 'Your Name Here'">Hi there {{ orderModel.name }}! </h2>
+  <!-- Display data received from the back end <br/>
   response data = {{ responsedata | json}}
   <br/>
   <hr/>
@@ -13,7 +13,7 @@
   {{ orderForm.value | json }}
   <br/>
   {{ orderModel | json }} 
-  <hr/>
+  <hr/> -->
   <div class="custom-container">
   <form #orderForm="ngForm" name="helpForm">
     <div class="form-group">
