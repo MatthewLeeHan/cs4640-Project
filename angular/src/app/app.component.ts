@@ -23,7 +23,6 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   senddata(data) {
-     console.log(data);
 
      let params = JSON.stringify(data);
 
@@ -31,8 +30,10 @@ export class AppComponent {
     //  this.http.get('http://localhost/cs4640-Project/ngphp-get.php')
      this.http.post('http://localhost/cs4640-Project/ngphp-post.php', data)
      .subscribe((data) => {
-        console.log('Got data from backend', data);
         this.responsedata = data;
+        console.log(this.responsedata);
+        alert("Thank you for your feedback!");
+        window.location.href = "http://localhost/cs4640-Project/";
      }, (error) => {
         console.log('Error', error);
      })
