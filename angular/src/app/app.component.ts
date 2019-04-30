@@ -17,7 +17,8 @@ export class AppComponent {
   responsedata;
 
   // drinks = ['Coffee', 'Tea', 'Milk'];
-  orderModel = new Order('', '',null , '');
+  orderModel = new Order('', '',null , '', '');
+  options = ["Creating an event", "Creating an account", "Viewing past events", "Reporting error", "Others"];
  
   constructor(private http: HttpClient) { }
 
