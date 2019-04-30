@@ -30,6 +30,7 @@ sudo ./manager-linux.run (or manager-linux-x64.run) -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="author" content="Matthew Han (mlh6fc) and Jiwon Cha (jc4va)">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>ScheduleMe</title>
