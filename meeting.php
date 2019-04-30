@@ -50,12 +50,7 @@ session_start();
                 <h1> <span class='block-title'>Members:</span> </h1>
                 <br>
                 <div class="createEventBtn">
-                    <h2>Member sign up </h2>
                     <form name="signupform" method="meeting.php" method="GET">
-                        <div class="nameinput">
-                            <p> Enter your name: </p>
-                            <input type="text" id="name" name="name" placeholder="Name"> <br>
-                        </div>
                         <div class="submitbtn">
                             <input type="submit" id="submit" name="submit" value="Sign Up">
                         </div>
