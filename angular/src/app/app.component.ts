@@ -6,7 +6,8 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'], 
+  styles: ['h1 { font-family: "Ubuntu", sans-serif; }']
 })
 export class AppComponent {
   title = 'Help Page';
