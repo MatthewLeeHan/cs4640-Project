@@ -62,7 +62,7 @@ sudo ./manager-linux.run (or manager-linux-x64.run) -->
 					?>
 					<a href = "./signup.html"><button>Sign Up</button></a>
 					<a href = "./dashboard.php"><button>Dashboard</button></a>
-					<a><button onclick='function redirect(){window.location.href = "http://localhost:4200";}; redirect()'>Angular</button></a>
+					<a><button onclick='function redirect(){window.location.href = "http://localhost:4200";}; redirect()'>Help</button></a>
 				</div>
 			</header>
 		</div>
