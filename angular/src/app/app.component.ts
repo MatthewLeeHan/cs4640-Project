@@ -14,10 +14,10 @@ export class AppComponent {
 
   // let's create a property to store a response from the back end
   // and try binding it back to the view
-  responsedata = 'response data';
+  responsedata;
 
   // drinks = ['Coffee', 'Tea', 'Milk'];
-  orderModel = new Order('Your Name Here', 'Your Email Here', 7777777777, 'Your message here');
+  orderModel = new Order('', '',null , '');
  
   constructor(private http: HttpClient) { }
 

@@ -18,33 +18,30 @@
   <form #orderForm="ngForm" name="helpForm">
     <div class="form-group">
       <label>Name: </label>
-      <input onfocus="this.value=''" required #name="ngModel" 
-             [class.is-invalid]="name.invalid"
+      <input required #name="ngModel" 
              [(ngModel)]="orderModel.name" type="text" class="form-control" name="name">
-      <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is requried</small>
+      <small class="text-danger" *ngIf="!name.valid && name.touched">Name is required</small>
     </div>
 
     <div class="form-group">
       <label>Email: </label>
-      <input onfocus="this.value=''" [(ngModel)]="orderModel.email" type="email" class="form-control" name="email">
+      <input [(ngModel)]="orderModel.email" type="email" class="form-control" name="email" #email="ngModel" required>
+      <small class="text-danger" *ngIf="!email.valid && email.touched">Email is required</small>
     </div>
 
     <div class="form-group">
       <label>Phone: </label>
-      <input onfocus="this.value=''" type="tel" class="form-control" required
-          #phone="ngModel" pattern="^\d{10}$" 
-          [class.is-invalid]="phone.invalid && phone.touched" 
+      <input type="tel" class="form-control" required
+          #phone="ngModel" pattern="^\d{10}$"  
           [(ngModel)]="orderModel.phone"  name="phone">
-      <small ng-show="helpForm.phone.$invalid" class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number is required and must be 10 digits</small>
+      <small class="text-danger" *ngIf="!phone.valid && phone.touched">Phone number is required and must be 10 digits</small>
     </div>
 
     <div class="form-group">
       <label>Message: </label>
-      <input onfocus="this.value=''" type="text" class="form-control" required
-      #text="ngModel" pattern="^\d{10}$" 
-      [class.is-invalid]="text.invalid && text.touched" 
-      [(ngModel)]="orderModel.text"  name="text">
-      <small ng-show="helpForm.text.$invalid" class="text-danger" [class.d-none]="text.valid || text.untouched">Help message is required</small>
+      <textarea type="text" name="bodytext" class="form-control" required
+      #bodytext="ngModel" [(ngModel)]="orderModel.bodytext"></textarea>
+      <small class="text-danger" *ngIf="!bodytext.valid && bodytext.touched">Help message is required</small>
     </div>
 
     <!-- <div class="form-group">
