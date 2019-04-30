@@ -4,7 +4,7 @@
   <h1 class="title">
     {{ title }}
   </h1>
-  <h2 class="welcoming-hi" *ngIf="orderModel.name != 'Your Name Here'">Hi there {{ orderModel.name }}! </h2>
+  <h2 [ngClass]="{'text-success':orderModel.name != ''}" *ngIf="orderModel.name != ''" class="welcoming-hi">Hi there {{ orderModel.name }}! </h2>
   <!-- Display data received from the back end <br/>
   response data = {{ responsedata | json}}
   <br/>
