@@ -48,22 +48,10 @@ session_start();
                     <span class='block-title'>Notes from the event creator:</span>
                     <p><?php echo $_SESSION['event_desc'] ?></p>
                 </div>
-                <h1> <span class='block-title'>Members:</span> </h1>
                 <br>
-                <div class="createEventBtn">
-                    <form name="signupform" method="meeting.php" method="GET">
-                        <div class="submitbtn">
-                            <input type="submit" id="submit" name="submit" value="Sign Up">
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
-
-    <?php
-        setcookie('member', $_GET['name'], time() + 3600);
-    ?>
 
     <!-- To read data from session variables -->
     <input id='row' value='<?php echo $_SESSION['$date1_day']; ?>' />
