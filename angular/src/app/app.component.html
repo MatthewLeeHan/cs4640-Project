@@ -46,7 +46,7 @@
       <small class="text-danger" *ngIf="!bodytext.valid && bodytext.touched">Help message is required</small>
     </div>
 
-    <div class="column small-12 large-2">
+    <div id="option_div" class="column small-12 large-2">
       <label class="sbw_light">What do you need help with? </label><br />
       <select [(ngModel)]="orderModel.option" class="custom-select" name="help_option">
         <option *ngFor="let option of options">{{option}} </option>
