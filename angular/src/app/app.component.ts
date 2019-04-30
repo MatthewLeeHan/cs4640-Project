@@ -33,7 +33,8 @@ export class AppComponent {
         this.responsedata = data;
         console.log(this.responsedata);
         alert("Thank you for your feedback!");
-        window.location.href = "http://localhost/cs4640-Project/";
+        window.location.href = "http://localhost/cs4640-Project";
+        
      }, (error) => {
         console.log('Error', error);
      })
